@@ -5,14 +5,28 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MenuList from '../components/MenuList.astro';
 
+import { Image } from 'astro:assets';
+import imgMezze from '../asset/images/greek-mezze.png';
+import imgChairs from '../asset/images/greek-chairs.png';
+import imgView from '../asset/images/aegean-view.png';
+
 const menuEntries = await getCollection('menu', ({ id }) => {
   return id.replace(/\\/g, '/').startsWith('it/');
 });
 
 menuEntries.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
 
-const title = "Menù – Delogo Cucina Greca";
-const description = "Scopri il nostro menù autentico: antipasti tipici, secondi piatti della tradizione e vini greci selezionati.";
+const { currentLocale } = Astro;
+const isIt = currentLocale === 'it' || currentLocale === undefined;
+
+const title = isIt ? "Menù – Delogo Cucina Greca" : "Menu – Delogo Greek Cuisine";
+const description = isIt 
+    ? "Scopri il nostro menù autentico: antipasti tipici, secondi piatti della tradizione e vini greci selezionati."
+    : "Discover our authentic menu: traditional starters, classic main courses, and selected Greek wines.";
+
+const introText = isIt
+    ? "Cucinare per qualcuno è un atto d'amore. Benvenuti al nostro tavolo, dove i sapori dell'Egeo incontrano il calore di Bologna. Lasciatevi guidare dai profumi e dalla tradizione."
+    : "Cooking for someone is an act of love. Welcome to our table, where the flavors of the Aegean meet the warmth of Bologna. Let yourself be guided by aromas and tradition.";
 ---
 
 <Layout title={title} description={description}>
@@ -20,7 +34,7 @@ const description = "Scopri il nostro menù autentico: antipasti tipici, secondi
 
 	<!-- Skip Link for Accessibility -->
 	<a href="#menu-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">
-		Vai al menù
+		{isIt ? 'Vai al menù' : 'Skip to menu'}
 	</a>
 
 	<main class="pb-16 md:pb-20 bg-paper" id="menu-content">
@@ -28,10 +42,32 @@ const description = "Scopri il nostro menù autentico: antipasti tipici, secondi
 		<div id="header-spacer" class="w-full"></div>
 
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center pt-8 md:pt-32 pb-8 md:pb-16">
-				<h1 class="text-4xl md:text-6xl mb-4 md:mb-6 font-marcellus text-accent tracking-wide">Il Nostro Menù</h1>
-				<p class="text-slate/80 italic text-base md:text-lg">"L'essenza della Grecia in ogni piatto"</p>
+			<div class="text-center pt-8 md:pt-32 pb-6 md:pb-12 reveal-on-scroll">
+				<h1 class="text-4xl md:text-7xl mb-4 md:mb-8 font-marcellus text-accent tracking-wide uppercase">
+                    {isIt ? 'Il Nostro Menù' : 'Our Menu'}
+                </h1>
+				<p class="max-w-2xl mx-auto text-lg md:text-2xl font-marcellus italic text-slate/70 leading-relaxed px-4">
+                    "{introText}"
+                </p>
 			</div>
+
+            <!-- Bento Imagery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-16 md:mb-32 reveal-on-scroll">
+                <div class="col-span-2 row-span-2 overflow-hidden rounded-2xl md:rounded-[2rem] border border-primary/5 group shadow-sm">
+                    <Image src={imgMezze} alt="Tradizione Greca" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                </div>
+                <div class="col-span-1 overflow-hidden rounded-2xl md:rounded-[2rem] border border-primary/5 aspect-[4/5] group shadow-sm">
+                    <Image src={imgChairs} alt="Calore Mediterraneo" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                </div>
+                <div class="col-span-1 overflow-hidden rounded-2xl md:rounded-[2rem] border border-primary/5 aspect-[4/5] group shadow-sm">
+                    <Image src={imgView} alt="Orizzonti dell'Egeo" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                </div>
+                <div class="col-span-2 h-32 md:h-48 bg-primary/5 rounded-2xl md:rounded-[2rem] flex items-center justify-center p-6 text-center border border-dashed border-primary/20">
+                    <p class="font-marcellus text-primary/60 italic text-sm md:text-lg">
+                        {isIt ? 'Un viaggio tra i sapori autentici di Creta e delle Isole.' : 'A journey through the authentic flavors of Crete and the Islands.'}
+                    </p>
+                </div>
+            </div>
 			
             <!-- Organic Category Navigation -->
             <nav 
@@ -107,10 +143,25 @@ const description = "Scopri il nostro menù autentico: antipasti tipici, secondi
 		border-radius: 68% 32% 44% 56% / 46% 52% 48% 54%;
 	}
 
+	/* ── Reveal on Scroll ── */
+	.reveal-on-scroll {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform, opacity;
+	}
+
+	.reveal-on-scroll.is-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
 	/* Reduced motion */
 	@media (prefers-reduced-motion: reduce) {
-		.category-pill {
+		.category-pill, .reveal-on-scroll {
 			transition: none !important;
+            opacity: 1 !important;
+            transform: none !important;
 		}
 	}
 </style>
@@ -273,12 +324,36 @@ const description = "Scopri il nostro menù autentico: antipasti tipici, secondi
 		setActive(findActiveSection());
 	}
 
+    // ── Intersection Observer for Reveal ──
+    function initRevealOnScroll() {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Stop observing once visible to prevent re-triggering
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
 	// ── Initialization ──
 	// Measure in three phases to always capture late-loading web fonts (like Cormorant Garamond)
 	// Phase 1: DOMContentLoaded
 	document.addEventListener('DOMContentLoaded', () => {
 		syncHeaderHeight();
 		initScrollSpy();
+        initRevealOnScroll();
 	});
 
 	// Phase 2: Fonts ready

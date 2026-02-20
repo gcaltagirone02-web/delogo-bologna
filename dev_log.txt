@@ -1,0 +1,731 @@
+[2m18:40:54[22m [34m[types][39m Generated [2m1ms[22m
+[2m18:40:54[22m [34m[content][39m Syncing content
+[2m18:40:54[22m [34m[content][39m Synced content
+
+[42m[1m astro [22m[49m [32mv5.17.2[39m [2mready in[22m 473 [2mms[22m
+
+[2mÔöâ[22m Local    [36mhttp://localhost:4321/[39m
+[2mÔöâ[22m Network  [2muse --host to expose[22m
+
+[2m18:40:54[22m [32mwatching for file changes...[39m
+[2m18:40:56[22m [34m[200][39m / [2m74ms[22m
+[2m18:40:56[22m [34m[watch][39m dev_log.txt
+[2m18:40:56[22m [34m[watch][39m dev_log.txt
+[2m18:41:26[22m [34m[200][39m / [2m22ms[22m
+[2m18:41:26[22m [34m[200][39m / [2m2ms[22m
+[2m18:41:37[22m [34m[200][39m /en [2m3ms[22m
+[2m18:41:37[22m [34m[200][39m / [2m2ms[22m
+[2m18:41:41[22m [34m[200][39m /en [2m2ms[22m
+[2m18:41:41[22m [34m[200][39m / [2m2ms[22m
+[2m18:42:13[22m [34m[watch][39m dev_log.txt
+[2m18:42:13[22m [34m[watch][39m dev_log.txt
+[2m18:42:13[22m [34m[200][39m / [2m20ms[22m
+[2m18:42:13[22m [34m[watch][39m dev_log.txt
+[2m18:42:13[22m [34m[watch][39m dev_log.txt
+[2m18:42:34[22m [34m[watch][39m /src/layouts/Layout.astro?astro&type=style&index=0&lang.css
+[2m18:42:34[22m [34m[watch][39m src/layouts/Layout.astro
+[2m18:42:36[22m [34m[watch][39m dev_log.txt
+[2m18:42:36[22m [34m[watch][39m dev_log.txt
+[2m18:42:37[22m [34m[200][39m / [2m32ms[22m
+[2m18:42:37[22m [34m[watch][39m dev_log.txt
+[2m18:42:37[22m [34m[watch][39m dev_log.txt
+[2m18:42:51[22m [34m[watch][39m src/components/Hero.astro
+[2m18:42:51[22m [34m[watch][39m src/components/Hero.astro
+[2m18:42:52[22m [34m[watch][39m dev_log.txt
+[2m18:42:52[22m [34m[watch][39m dev_log.txt
+[2m18:42:52[22m [34m[200][39m / [2m23ms[22m
+[2m18:42:52[22m [34m[watch][39m dev_log.txt
+[2m18:42:52[22m [34m[watch][39m dev_log.txt
+[2m18:43:02[22m [34m[watch][39m src/components/MenuList.astro
+[2m18:43:02[22m [34m[watch][39m src/components/MenuList.astro
+[2m18:43:03[22m [34m[watch][39m dev_log.txt
+[2m18:43:03[22m [34m[watch][39m dev_log.txt
+[2m18:43:03[22m [34m[200][39m / [2m24ms[22m
+[2m18:43:03[22m [34m[watch][39m dev_log.txt
+[2m18:43:03[22m [34m[watch][39m dev_log.txt
+[2m18:43:22[22m [34m[watch][39m src/components/MenuList.astro
+[2m18:43:22[22m [34m[watch][39m src/components/MenuList.astro
+[2m18:43:23[22m [34m[watch][39m dev_log.txt
+[2m18:43:23[22m [34m[watch][39m dev_log.txt
+[2m18:43:23[22m [34m[200][39m / [2m24ms[22m
+[2m18:43:23[22m [34m[watch][39m dev_log.txt
+[2m18:43:23[22m [34m[watch][39m dev_log.txt
+[2m18:44:21[22m [34m[200][39m /menu [2m31ms[22m
+[2m18:44:21[22m [34m[watch][39m dev_log.txt
+[2m18:44:21[22m [34m[watch][39m dev_log.txt
+[2m18:44:28[22m [34m[200][39m / [2m21ms[22m
+[2m18:44:28[22m [34m[watch][39m dev_log.txt
+[2m18:44:28[22m [34m[watch][39m dev_log.txt
+[2m18:45:57[22m [34m[watch][39m src/content/menu/it/antipasti.json
+[2m18:45:57[22m [34m[watch][39m src/content/menu/it/antipasti.json
+[2m18:45:57[22m [34m[glob-loader][39m Reloaded data from [32mit/antipasti.json[39m
+[2m18:45:58[22m [34m[watch][39m dev_log.txt
+[2m18:45:58[22m [34m[watch][39m dev_log.txt
+[2m18:45:58[22m [34m[200][39m / [2m23ms[22m
+[2m18:45:58[22m [34m[watch][39m dev_log.txt
+[2m18:45:58[22m [34m[watch][39m dev_log.txt
+[2m18:45:59[22m [34m[watch][39m src/content/menu/it/secondi.json
+[2m18:45:59[22m [34m[watch][39m src/content/menu/it/secondi.json
+[2m18:45:59[22m [34m[glob-loader][39m Reloaded data from [32mit/secondi.json[39m
+[2m18:46:00[22m [34m[watch][39m dev_log.txt
+[2m18:46:00[22m [34m[watch][39m dev_log.txt
+[2m18:46:00[22m [34m[200][39m / [2m22ms[22m
+[2m18:46:00[22m [34m[watch][39m dev_log.txt
+[2m18:46:00[22m [34m[watch][39m dev_log.txt
+[2m18:46:01[22m [34m[watch][39m src/content/menu/en/antipasti.json
+[2m18:46:01[22m [34m[watch][39m src/content/menu/en/antipasti.json
+[2m18:46:01[22m [34m[glob-loader][39m Reloaded data from [32men/antipasti.json[39m
+[2m18:46:01[22m [34m[watch][39m dev_log.txt
+[2m18:46:01[22m [34m[watch][39m dev_log.txt
+18:46:01 [ERROR] [UnknownFilesystemError] 
+  Hint:
+    It can be caused by many things, eg. missing permissions or a file not existing we attempt to read. Check the error cause for more details.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/unknown-filesystem-error/
+  Stack trace:
+    at C:\Users\Calta\Desktop\Delogo\node_modules\astro\dist\content\mutable-data-store.js:337:13
+    [...] See full stack trace in the browser, or rerun with --verbose.
+  Caused by:
+  ENOENT: no such file or directory, rename 'C:\Users\Calta\Desktop\Delogo\.astro\data-store.json.tmp' -> 'C:\Users\Calta\Desktop\Delogo\.astro\data-store.json'
+    at async Object.rename (node:internal/fs/promises:782:10)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:02[22m [34m[watch][39m dev_log.txt
+[2m18:46:02[22m [34m[watch][39m dev_log.txt
+[2m18:46:02[22m [34m[200][39m / [2m24ms[22m
+[2m18:46:02[22m [34m[watch][39m dev_log.txt
+[2m18:46:02[22m [34m[watch][39m dev_log.txt
+[2m18:46:03[22m [34m[watch][39m src/content/menu/en/secondi.json
+[2m18:46:03[22m [34m[watch][39m src/content/menu/en/secondi.json
+[2m18:46:03[22m [34m[glob-loader][39m Reloaded data from [32men/secondi.json[39m
+[2m18:46:03[22m [34m[watch][39m dev_log.txt
+[2m18:46:03[22m [34m[watch][39m dev_log.txt
+18:46:03 [ERROR] [UnknownFilesystemError] 
+  Hint:
+    It can be caused by many things, eg. missing permissions or a file not existing we attempt to read. Check the error cause for more details.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/unknown-filesystem-error/
+  Stack trace:
+    at C:\Users\Calta\Desktop\Delogo\node_modules\astro\dist\content\mutable-data-store.js:337:13
+    [...] See full stack trace in the browser, or rerun with --verbose.
+  Caused by:
+  ENOENT: no such file or directory, rename 'C:\Users\Calta\Desktop\Delogo\.astro\data-store.json.tmp' -> 'C:\Users\Calta\Desktop\Delogo\.astro\data-store.json'
+    at async Object.rename (node:internal/fs/promises:782:10)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:04[22m [34m[200][39m / [2m22ms[22m
+[2m18:46:04[22m [34m[watch][39m dev_log.txt
+[2m18:46:04[22m [34m[watch][39m dev_log.txt
+[2m18:46:13[22m [34m[watch][39m src/components/Header.astro
+[2m18:46:13[22m [34m[watch][39m src/components/Header.astro
+[2m18:46:14[22m [34m[watch][39m dev_log.txt
+[2m18:46:14[22m [34m[watch][39m dev_log.txt
+18:46:14 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:15[22m [34m[watch][39m src/components/Hero.astro
+[2m18:46:15[22m [34m[watch][39m src/components/Hero.astro
+[2m18:46:16[22m [34m[watch][39m dev_log.txt
+[2m18:46:16[22m [34m[watch][39m dev_log.txt
+18:46:16 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:17[22m [34m[watch][39m dev_log.txt
+[2m18:46:17[22m [34m[watch][39m dev_log.txt
+18:46:18 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:21[22m [34m[watch][39m src/components/Hero.astro
+[2m18:46:21[22m [34m[watch][39m src/components/Hero.astro
+[2m18:46:22[22m [34m[watch][39m dev_log.txt
+[2m18:46:22[22m [34m[watch][39m dev_log.txt
+18:46:22 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:23[22m [34m[watch][39m dev_log.txt
+[2m18:46:23[22m [34m[watch][39m dev_log.txt
+18:46:24 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:30[22m [34m[watch][39m dev_log.txt
+[2m18:46:30[22m [34m[watch][39m dev_log.txt
+18:46:31 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:33[22m [34m[watch][39m dev_log.txt
+[2m18:46:33[22m [34m[watch][39m dev_log.txt
+18:46:34 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:38[22m [34m[watch][39m dev_log.txt
+[2m18:46:38[22m [34m[watch][39m dev_log.txt
+18:46:39 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:46:40[22m [34m[watch][39m dev_log.txt
+[2m18:46:40[22m [34m[watch][39m dev_log.txt
+18:46:41 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:47:44 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:47:46 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:47:47 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:47:47 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:47:48 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:47:49 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:48:15[22m [34m[watch][39m dev_log.txt
+[2m18:48:15[22m [34m[watch][39m dev_log.txt
+18:48:15 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Header.astro:12:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:48:18[22m [34m[watch][39m dev_log.txt
+[2m18:48:18[22m [34m[watch][39m dev_log.txt
+18:48:18 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:48:22[22m [34m[watch][39m src/components/Header.astro
+[2m18:48:22[22m [34m[watch][39m src/components/Header.astro
+[2m18:48:22[22m [34m[watch][39m dev_log.txt
+[2m18:48:22[22m [34m[watch][39m dev_log.txt
+18:48:22 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:20:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:48:24[22m [34m[watch][39m dev_log.txt
+[2m18:48:24[22m [34m[watch][39m dev_log.txt
+18:48:24 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:48:27[22m [34m[watch][39m dev_log.txt
+[2m18:48:27[22m [34m[watch][39m dev_log.txt
+18:48:27 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:20:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:48:30[22m [34m[watch][39m src/components/Hero.astro
+[2m18:48:30[22m [34m[watch][39m src/components/Hero.astro
+[2m18:48:30[22m [34m[watch][39m dev_log.txt
+[2m18:48:30[22m [34m[watch][39m dev_log.txt
+[2m18:48:30[22m [34m[200][39m / [2m23ms[22m
+[2m18:48:30[22m [34m[watch][39m dev_log.txt
+[2m18:48:30[22m [34m[watch][39m dev_log.txt
+[2m18:48:38[22m [34m[200][39m /en/ [2m25ms[22m
+[2m18:48:38[22m [34m[watch][39m dev_log.txt
+[2m18:48:38[22m [34m[watch][39m dev_log.txt
+[2m18:48:39[22m [34m[200][39m / [2m21ms[22m
+[2m18:48:40[22m [34m[watch][39m dev_log.txt
+[2m18:48:40[22m [34m[watch][39m dev_log.txt
+[2m18:48:41[22m [34m[200][39m /en/ [2m23ms[22m
+[2m18:48:41[22m [34m[watch][39m dev_log.txt
+[2m18:48:41[22m [34m[watch][39m dev_log.txt
+[2m18:48:42[22m [34m[200][39m / [2m29ms[22m
+[2m18:48:42[22m [34m[watch][39m dev_log.txt
+[2m18:48:42[22m [34m[watch][39m dev_log.txt
+[2m18:48:47[22m [34m[200][39m /menu/ [2m23ms[22m
+[2m18:48:47[22m [34m[watch][39m dev_log.txt
+[2m18:48:47[22m [34m[watch][39m dev_log.txt
+[2m18:49:35[22m [34m[watch][39m src/layouts/Layout.astro
+[2m18:49:36[22m [34m[watch][39m dev_log.txt
+[2m18:49:36[22m [34m[watch][39m dev_log.txt
+[2m18:49:36[22m [34m[200][39m / [2m25ms[22m
+18:49:36 [ERROR] BaseHead is not defined
+  Stack trace:
+    at eval (C:/Users/Calta/Desktop/Delogo/src/layouts/Layout.astro:24:182)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:49:37[22m [34m[watch][39m src/layouts/Layout.astro
+[2m18:49:38[22m [34m[watch][39m dev_log.txt
+[2m18:49:38[22m [34m[watch][39m dev_log.txt
+[2m18:49:38[22m [34m[200][39m / [2m24ms[22m
+[2m18:49:38[22m [34m[watch][39m dev_log.txt
+[2m18:49:38[22m [34m[watch][39m dev_log.txt
+[2m18:51:06[22m Configuration file updated. Restarting...
+[2m18:51:06[22m [34m[watch][39m astro.config.mjs
+[2m18:51:06[22m [34m[watch][39m astro.config.mjs
+[2m18:51:06[22m [34m[watch][39m dev_log.txt
+[2m18:51:06[22m [34m[watch][39m dev_log.txt
+[2m18:51:06[22m [34m[content][39m Syncing content
+[2m18:51:06[22m [34m[content][39m Astro config changed
+[2m18:51:06[22m [34m[content][39m Clearing content store
+[2m18:51:06[22m [34m[content][39m Synced content
+[2m18:51:06[22m [34m[types][39m Generated [2m304ms[22m
+[2m18:51:06[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m18:51:06[22m [34m[200][39m / [2m45ms[22m
+[2m18:51:06[22m [34m[200][39m / [2m45ms[22m
+[2m18:51:06[22m [34m[watch][39m dev_log.txt
+[2m18:51:06[22m [34m[watch][39m dev_log.txt
+[2m18:51:08[22m [34m[watch][39m src/components/Hero.astro
+[2m18:51:08[22m [34m[watch][39m src/components/Hero.astro
+[2m18:51:08[22m [34m[watch][39m dev_log.txt
+[2m18:51:08[22m [34m[watch][39m dev_log.txt
+18:51:08 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:21:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:51:10[22m [34m[watch][39m src/components/SEOHead.astro
+[2m18:51:10[22m [34m[watch][39m src/components/SEOHead.astro
+[2m18:51:10[22m [34m[watch][39m dev_log.txt
+[2m18:51:10[22m [34m[watch][39m dev_log.txt
+18:51:10 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:51:20 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:21:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:51:20[22m [34m[watch][39m dev_log.txt
+[2m18:51:20[22m [34m[watch][39m dev_log.txt
+18:51:20 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:51:21[22m [34m[watch][39m dev_log.txt
+[2m18:51:21[22m [34m[watch][39m dev_log.txt
+18:51:21 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:21:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:51:27[22m [34m[watch][39m dev_log.txt
+[2m18:51:27[22m [34m[watch][39m dev_log.txt
+18:51:28 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:51:29[22m [34m[watch][39m dev_log.txt
+[2m18:51:29[22m [34m[watch][39m dev_log.txt
+18:51:29 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:21:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:51:32[22m [34m[watch][39m dev_log.txt
+[2m18:51:32[22m [34m[watch][39m dev_log.txt
+18:51:32 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+18:52:02 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:21:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:04[22m [34m[watch][39m dev_log.txt
+[2m18:52:04[22m [34m[watch][39m dev_log.txt
+18:52:04 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:06[22m [34m[watch][39m dev_log.txt
+[2m18:52:06[22m [34m[watch][39m dev_log.txt
+18:52:06 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at C:/Users/Calta/Desktop/Delogo/src/components/Hero.astro:21:1
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:08[22m [34m[watch][39m dev_log.txt
+[2m18:52:08[22m [34m[watch][39m dev_log.txt
+18:52:09 [ERROR] [CompilerError] The closing frontmatter fence (---) is missing an opening fence
+  Hint:
+    Add --- at the beginning of your file before any import statements or code
+  Stack trace:
+    at handleCompileResultErrors (file:///C:/Users/Calta/Desktop/Delogo/node_modules/astro/dist/core/compile/compile.js:65:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:12[22m [34m[watch][39m src/components/Hero.astro
+[2m18:52:12[22m [34m[watch][39m src/components/Hero.astro
+[2m18:52:12[22m [34m[watch][39m dev_log.txt
+[2m18:52:12[22m [34m[watch][39m dev_log.txt
+[2m18:52:12[22m [34m[200][39m / [2m23ms[22m
+[2m18:52:12[22m [34m[200][39m / [2m23ms[22m
+[2m18:52:12[22m [34m[watch][39m dev_log.txt
+[2m18:52:12[22m [34m[watch][39m dev_log.txt
+[2m18:52:13[22m [34m[200][39m /_image [2m404ms[22m
+[2m18:52:14[22m [34m[watch][39m src/components/SEOHead.astro
+[2m18:52:14[22m [34m[watch][39m src/components/SEOHead.astro
+18:52:14 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:16[22m [34m[watch][39m dev_log.txt
+[2m18:52:16[22m [34m[watch][39m dev_log.txt
+18:52:16 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:20[22m [34m[watch][39m dev_log.txt
+[2m18:52:20[22m [34m[watch][39m dev_log.txt
+18:52:20 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:27[22m [34m[watch][39m dev_log.txt
+[2m18:52:27[22m [34m[watch][39m dev_log.txt
+18:52:27 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:27[22m [34m[watch][39m dev_log.txt
+[2m18:52:27[22m [34m[watch][39m dev_log.txt
+18:52:27 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:30[22m [34m[watch][39m dev_log.txt
+[2m18:52:30[22m [34m[watch][39m dev_log.txt
+18:52:30 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:34[22m [34m[watch][39m dev_log.txt
+[2m18:52:34[22m [34m[watch][39m dev_log.txt
+18:52:34 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:34[22m [34m[watch][39m dev_log.txt
+[2m18:52:34[22m [34m[watch][39m dev_log.txt
+18:52:34 [ERROR] Unexpected ":"
+  Stack trace:
+    at failureErrorWithLog (C:\Users\Calta\Desktop\Delogo\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+[2m18:52:38[22m [34m[watch][39m src/components/SEOHead.astro
+[2m18:52:38[22m [34m[watch][39m src/components/SEOHead.astro
+[2m18:52:38[22m [34m[watch][39m dev_log.txt
+[2m18:52:38[22m [34m[watch][39m dev_log.txt
+[2m18:52:38[22m [34m[200][39m / [2m23ms[22m
+[2m18:52:38[22m [34m[watch][39m dev_log.txt
+[2m18:52:38[22m [34m[watch][39m dev_log.txt
+[2m18:56:36[22m [34m[watch][39m src/components/Header.astro
+[2m18:56:36[22m [34m[watch][39m src/components/Header.astro
+[2m18:56:37[22m [34m[watch][39m dev_log.txt
+[2m18:56:37[22m [34m[watch][39m dev_log.txt
+[2m18:56:37[22m [34m[200][39m / [2m27ms[22m
+[2m18:56:37[22m [34m[watch][39m dev_log.txt
+[2m18:56:37[22m [34m[watch][39m dev_log.txt
+[2m18:56:50[22m [34m[watch][39m /src/layouts/Layout.astro?astro&type=style&index=0&lang.css
+[2m18:56:50[22m [34m[watch][39m src/layouts/Layout.astro
+[2m18:56:52[22m [34m[watch][39m src/components/Footer.astro
+[2m18:56:52[22m [34m[watch][39m src/components/Footer.astro
+[2m18:56:52[22m [34m[watch][39m dev_log.txt
+[2m18:56:52[22m [34m[watch][39m dev_log.txt
+[2m18:56:52[22m [34m[200][39m / [2m35ms[22m
+[2m18:56:52[22m [34m[watch][39m dev_log.txt
+[2m18:56:52[22m [34m[watch][39m dev_log.txt
+[2m18:56:54[22m [34m[watch][39m src/components/MenuCard.astro
+[2m18:56:54[22m [34m[watch][39m src/components/MenuCard.astro
+[2m18:56:54[22m [34m[watch][39m dev_log.txt
+[2m18:56:54[22m [34m[watch][39m dev_log.txt
+[2m18:56:54[22m [34m[200][39m / [2m24ms[22m
+[2m18:56:54[22m [34m[watch][39m dev_log.txt
+[2m18:56:54[22m [34m[watch][39m dev_log.txt
+[2m18:59:49[22m [34m[200][39m /menu/ [2m27ms[22m
+[2m18:59:49[22m [34m[watch][39m dev_log.txt
+[2m18:59:49[22m [34m[watch][39m dev_log.txt
+[2m18:59:55[22m [34m[200][39m / [2m22ms[22m
+[2m18:59:55[22m [34m[watch][39m dev_log.txt
+[2m18:59:55[22m [34m[watch][39m dev_log.txt
+[2m19:06:56[22m [34m[watch][39m src/pages/index.astro
+[2m19:06:56[22m [34m[watch][39m src/pages/index.astro
+[2m19:06:56[22m [34m[watch][39m dev_log.txt
+[2m19:06:56[22m [34m[watch][39m dev_log.txt
+[2m19:06:56[22m [34m[200][39m / [2m33ms[22m
+[2m19:06:56[22m [34m[watch][39m dev_log.txt
+[2m19:06:56[22m [34m[watch][39m dev_log.txt
+[2m19:06:58[22m [34m[watch][39m src/components/Hero.astro
+[2m19:06:58[22m [34m[watch][39m src/components/Hero.astro
+[2m19:06:59[22m [34m[watch][39m dev_log.txt
+[2m19:06:59[22m [34m[watch][39m dev_log.txt
+[2m19:06:59[22m [34m[200][39m / [2m26ms[22m
+[2m19:06:59[22m [34m[watch][39m dev_log.txt
+[2m19:06:59[22m [34m[watch][39m dev_log.txt
+[2m19:07:28[22m [34m[watch][39m src/pages/index.astro
+[2m19:07:28[22m [34m[watch][39m src/pages/index.astro
+[2m19:07:29[22m [34m[watch][39m dev_log.txt
+[2m19:07:29[22m [34m[watch][39m dev_log.txt
+[2m19:07:29[22m [34m[200][39m / [2m33ms[22m
+[2m19:07:29[22m [34m[watch][39m dev_log.txt
+[2m19:07:29[22m [34m[watch][39m dev_log.txt
+[2m19:07:49[22m [34m[watch][39m src/pages/index.astro
+[2m19:07:49[22m [34m[watch][39m src/pages/index.astro
+[2m19:07:50[22m [34m[watch][39m dev_log.txt
+[2m19:07:50[22m [34m[watch][39m dev_log.txt
+[2m19:07:50[22m [34m[200][39m / [2m31ms[22m
+[2m19:07:50[22m [34m[watch][39m dev_log.txt
+[2m19:07:50[22m [34m[watch][39m dev_log.txt
+[2m19:08:10[22m [34m[watch][39m src/pages/index.astro
+[2m19:08:10[22m [34m[watch][39m src/pages/index.astro
+[2m19:08:11[22m [34m[watch][39m dev_log.txt
+[2m19:08:11[22m [34m[watch][39m dev_log.txt
+[2m19:08:11[22m [34m[200][39m / [2m29ms[22m
+[2m19:08:11[22m [34m[watch][39m dev_log.txt
+[2m19:08:11[22m [34m[watch][39m dev_log.txt
+[2m19:08:29[22m [34m[200][39m / [2m26ms[22m
+[2m19:08:29[22m [34m[watch][39m dev_log.txt
+[2m19:08:29[22m [34m[watch][39m dev_log.txt
+[2m19:09:11[22m [34m[200][39m / [2m32ms[22m
+[2m19:09:11[22m [34m[watch][39m dev_log.txt
+[2m19:09:11[22m [34m[watch][39m dev_log.txt
+[2m19:09:11[22m [34m[200][39m /_image [2m440ms[22m
+[2m19:09:14[22m [33m[404][39m /robots.txt [2m0ms[22m
+[2m19:09:17[22m [34m[watch][39m dev_log.txt
+[2m19:09:17[22m [34m[watch][39m dev_log.txt
+[2m19:09:17[22m [34m[200][39m / [2m29ms[22m
+[2m19:09:17[22m [34m[watch][39m dev_log.txt
+[2m19:09:17[22m [34m[watch][39m dev_log.txt
+[2m19:12:10[22m [34m[watch][39m src/components/BaseHead.astro
+[2m19:12:10[22m [34m[watch][39m src/components/BaseHead.astro
+[2m19:12:11[22m [34m[watch][39m dev_log.txt
+[2m19:12:11[22m [34m[watch][39m dev_log.txt
+[2m19:12:11[22m [34m[200][39m / [2m30ms[22m
+[2m19:12:11[22m [34m[watch][39m dev_log.txt
+[2m19:12:11[22m [34m[watch][39m dev_log.txt
+[2m19:14:10[22m [34m[watch][39m src/components/Hero.astro
+[2m19:14:10[22m [34m[watch][39m src/components/Hero.astro
+[2m19:14:10[22m [34m[watch][39m dev_log.txt
+[2m19:14:10[22m [34m[watch][39m dev_log.txt
+[2m19:14:10[22m [34m[200][39m / [2m31ms[22m
+[2m19:14:10[22m [34m[watch][39m dev_log.txt
+[2m19:14:10[22m [34m[watch][39m dev_log.txt
+[2m19:14:16[22m [34m[watch][39m src/components/StarDishes.astro
+[2m19:14:16[22m [34m[watch][39m src/components/StarDishes.astro
+[2m19:14:17[22m [34m[watch][39m dev_log.txt
+[2m19:14:17[22m [34m[watch][39m dev_log.txt
+[2m19:14:17[22m [34m[200][39m / [2m29ms[22m
+[2m19:14:17[22m [34m[watch][39m dev_log.txt
+[2m19:14:17[22m [34m[watch][39m dev_log.txt
+[2m19:15:12[22m [34m[watch][39m src/components/StarDishes.astro
+[2m19:15:12[22m [34m[watch][39m src/components/StarDishes.astro
+[2m19:15:13[22m [34m[watch][39m dev_log.txt
+[2m19:15:13[22m [34m[watch][39m dev_log.txt
+[2m19:15:13[22m [34m[200][39m / [2m28ms[22m
+[2m19:15:13[22m [34m[watch][39m dev_log.txt
+[2m19:15:13[22m [34m[watch][39m dev_log.txt
+[2m19:15:13[22m [34m[200][39m /_image [2m337ms[22m
+[2m19:15:13[22m [34m[200][39m /_image [2m397ms[22m
+[2m19:15:55[22m [34m[watch][39m dev_log.txt
+[2m19:15:55[22m [34m[watch][39m dev_log.txt
+[2m19:15:55[22m [34m[200][39m /menu [2m27ms[22m
+[2m19:15:55[22m [34m[watch][39m dev_log.txt
+[2m19:15:55[22m [34m[watch][39m dev_log.txt
+[2m19:16:54[22m [34m[watch][39m brief.md
+[2m19:16:54[22m [34m[watch][39m brief.md
+[2m19:16:54[22m [34m[watch][39m dev_log.txt
+[2m19:16:54[22m [34m[watch][39m dev_log.txt
+[2m19:16:55[22m [34m[200][39m /menu [2m28ms[22m
+[2m19:16:55[22m [34m[watch][39m dev_log.txt
+[2m19:16:55[22m [34m[watch][39m dev_log.txt
+[2m19:17:26[22m [34m[200][39m / [2m27ms[22m
+[2m19:17:26[22m [34m[watch][39m dev_log.txt
+[2m19:17:26[22m [34m[watch][39m dev_log.txt
+[2m19:38:40[22m [34m[watch][39m src/components/Header.astro
+[2m19:38:40[22m [34m[watch][39m src/components/Header.astro
+[2m19:38:40[22m [34m[watch][39m dev_log.txt
+[2m19:38:40[22m [34m[watch][39m dev_log.txt
+[2m19:38:40[22m [34m[200][39m / [2m33ms[22m
+[2m19:38:40[22m [34m[watch][39m dev_log.txt
+[2m19:38:40[22m [34m[watch][39m dev_log.txt
+[2m19:38:41[22m [34m[200][39m / [2m30ms[22m
+[2m19:38:41[22m [34m[watch][39m dev_log.txt
+[2m19:38:41[22m [34m[watch][39m dev_log.txt
+[2m19:38:41[22m [34m[200][39m /_image [2m85ms[22m
+[2m19:40:01[22m [34m[watch][39m src/components/Header.astro
+[2m19:40:01[22m [34m[watch][39m src/components/Header.astro
+[2m19:40:01[22m [34m[watch][39m dev_log.txt
+[2m19:40:01[22m [34m[watch][39m dev_log.txt
+[2m19:40:01[22m [34m[200][39m / [2m34ms[22m
+[2m19:40:01[22m [34m[watch][39m dev_log.txt
+[2m19:40:01[22m [34m[watch][39m dev_log.txt
+[2m19:40:01[22m [34m[200][39m /_image [2m73ms[22m
+[2m19:40:44[22m [34m[watch][39m dev_log.txt
+[2m19:40:44[22m [34m[watch][39m dev_log.txt
+[2m19:40:45[22m [34m[200][39m / [2m28ms[22m
+[2m19:40:45[22m [34m[watch][39m dev_log.txt
+[2m19:40:45[22m [34m[watch][39m dev_log.txt
+[2m19:41:27[22m [34m[watch][39m src/components/Header.astro
+[2m19:41:27[22m [34m[watch][39m src/components/Header.astro
+[2m19:41:28[22m [34m[watch][39m dev_log.txt
+[2m19:41:28[22m [34m[watch][39m dev_log.txt
+[2m19:41:28[22m [34m[200][39m / [2m31ms[22m
+[2m19:41:28[22m [34m[watch][39m dev_log.txt
+[2m19:41:28[22m [34m[watch][39m dev_log.txt
+[2m19:41:47[22m [34m[watch][39m src/components/Header.astro
+[2m19:41:47[22m [34m[watch][39m src/components/Header.astro
+[2m19:41:48[22m [34m[watch][39m dev_log.txt
+[2m19:41:48[22m [34m[watch][39m dev_log.txt
+[2m19:41:48[22m [34m[200][39m / [2m35ms[22m
+[2m19:41:48[22m [34m[watch][39m dev_log.txt
+[2m19:41:48[22m [34m[watch][39m dev_log.txt
+[2m19:41:50[22m [34m[200][39m / [2m28ms[22m
+[2m19:41:50[22m [34m[watch][39m dev_log.txt
+[2m19:41:50[22m [34m[watch][39m dev_log.txt
+[2m19:42:01[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:01[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:02[22m [34m[watch][39m dev_log.txt
+[2m19:42:02[22m [34m[watch][39m dev_log.txt
+[2m19:42:02[22m [34m[200][39m / [2m32ms[22m
+[2m19:42:02[22m [34m[watch][39m dev_log.txt
+[2m19:42:02[22m [34m[watch][39m dev_log.txt
+[2m19:42:06[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:06[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:07[22m [34m[watch][39m dev_log.txt
+[2m19:42:07[22m [34m[watch][39m dev_log.txt
+[2m19:42:07[22m [34m[200][39m / [2m30ms[22m
+[2m19:42:07[22m [34m[watch][39m dev_log.txt
+[2m19:42:07[22m [34m[watch][39m dev_log.txt
+[2m19:42:22[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:22[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:23[22m [34m[watch][39m dev_log.txt
+[2m19:42:23[22m [34m[watch][39m dev_log.txt
+[2m19:42:23[22m [34m[200][39m / [2m31ms[22m
+[2m19:42:23[22m [34m[watch][39m dev_log.txt
+[2m19:42:23[22m [34m[watch][39m dev_log.txt
+[2m19:42:33[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:33[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:34[22m [34m[watch][39m dev_log.txt
+[2m19:42:34[22m [34m[watch][39m dev_log.txt
+[2m19:42:34[22m [34m[200][39m / [2m32ms[22m
+[2m19:42:34[22m [34m[watch][39m dev_log.txt
+[2m19:42:34[22m [34m[watch][39m dev_log.txt
+[2m19:42:38[22m [34m[200][39m / [2m30ms[22m
+[2m19:42:38[22m [34m[watch][39m dev_log.txt
+[2m19:42:38[22m [34m[watch][39m dev_log.txt
+[2m19:42:39[22m [34m[200][39m / [2m29ms[22m
+[2m19:42:39[22m [34m[watch][39m dev_log.txt
+[2m19:42:39[22m [34m[watch][39m dev_log.txt
+[2m19:42:50[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:50[22m [34m[watch][39m src/components/Header.astro
+[2m19:42:51[22m [34m[watch][39m dev_log.txt
+[2m19:42:51[22m [34m[watch][39m dev_log.txt
+[2m19:42:51[22m [34m[200][39m / [2m33ms[22m
+[2m19:42:51[22m [34m[watch][39m dev_log.txt
+[2m19:42:51[22m [34m[watch][39m dev_log.txt
+[2m19:43:02[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:02[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:03[22m [34m[watch][39m dev_log.txt
+[2m19:43:03[22m [34m[watch][39m dev_log.txt
+[2m19:43:03[22m [34m[200][39m / [2m33ms[22m
+[2m19:43:03[22m [34m[watch][39m dev_log.txt
+[2m19:43:03[22m [34m[watch][39m dev_log.txt
+[2m19:43:06[22m [34m[200][39m / [2m29ms[22m
+[2m19:43:06[22m [34m[watch][39m dev_log.txt
+[2m19:43:06[22m [34m[watch][39m dev_log.txt
+[2m19:43:10[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:10[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:11[22m [34m[watch][39m dev_log.txt
+[2m19:43:11[22m [34m[watch][39m dev_log.txt
+[2m19:43:11[22m [34m[200][39m / [2m30ms[22m
+[2m19:43:11[22m [34m[watch][39m dev_log.txt
+[2m19:43:11[22m [34m[watch][39m dev_log.txt
+[2m19:43:29[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:29[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:30[22m [34m[watch][39m dev_log.txt
+[2m19:43:30[22m [34m[watch][39m dev_log.txt
+[2m19:43:30[22m [34m[200][39m / [2m44ms[22m
+[2m19:43:30[22m [34m[watch][39m dev_log.txt
+[2m19:43:30[22m [34m[watch][39m dev_log.txt
+[2m19:43:45[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:45[22m [34m[watch][39m src/components/Header.astro
+[2m19:43:46[22m [34m[watch][39m dev_log.txt
+[2m19:43:46[22m [34m[watch][39m dev_log.txt
+[2m19:43:46[22m [34m[200][39m / [2m30ms[22m
+[2m19:43:46[22m [34m[watch][39m dev_log.txt
+[2m19:43:46[22m [34m[watch][39m dev_log.txt
+[2m19:44:24[22m [34m[watch][39m src/components/Header.astro
+[2m19:44:24[22m [34m[watch][39m src/components/Header.astro
+[2m19:44:25[22m [34m[watch][39m dev_log.txt
+[2m19:44:25[22m [34m[watch][39m dev_log.txt
+[2m19:44:25[22m [34m[200][39m / [2m37ms[22m
+[2m19:44:25[22m [34m[watch][39m dev_log.txt
+[2m19:44:25[22m [34m[watch][39m dev_log.txt
+[2m19:44:25[22m [34m[200][39m /_image [2m26ms[22m
+[2m19:44:30[22m [34m[watch][39m dev_log.txt
+[2m19:44:30[22m [34m[watch][39m dev_log.txt
+[2m19:44:30[22m [34m[200][39m / [2m32ms[22m
+[2m19:44:30[22m [34m[watch][39m dev_log.txt
+[2m19:44:30[22m [34m[watch][39m dev_log.txt

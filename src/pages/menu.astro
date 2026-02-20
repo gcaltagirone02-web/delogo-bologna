@@ -1,0 +1,321 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MenuList from '../components/MenuList.astro';
+
+const menuEntries = await getCollection('menu', ({ id }) => {
+  return id.replace(/\\/g, '/').startsWith('it/');
+});
+
+menuEntries.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
+
+const title = "Menù – Delogo Cucina Greca";
+const description = "Scopri il nostro menù autentico: antipasti tipici, secondi piatti della tradizione e vini greci selezionati.";
+---
+
+<Layout title={title} description={description}>
+	<Header theme="menu" />
+
+	<!-- Skip Link for Accessibility -->
+	<a href="#menu-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">
+		Vai al menù
+	</a>
+
+	<main class="pb-16 md:pb-20 bg-paper" id="menu-content">
+		<!-- Spacer: dynamically sized to match header height -->
+		<div id="header-spacer" class="w-full"></div>
+
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center pt-8 md:pt-32 pb-8 md:pb-16">
+				<h1 class="text-4xl md:text-6xl mb-4 md:mb-6 font-marcellus text-accent tracking-wide">Il Nostro Menù</h1>
+				<p class="text-slate/80 italic text-base md:text-lg">"L'essenza della Grecia in ogni piatto"</p>
+			</div>
+			
+            <!-- Floating Category Navigation -->
+            <nav 
+				id="category-nav-wrapper"
+				class="sticky z-40 mb-6 md:mb-16 w-full transform-gpu"
+				style="top: calc(var(--header-h, 121px) + 8px); transition: top 500ms ease-in-out; will-change: top;"
+				role="navigation" 
+				aria-label="Categorie menù"
+			>
+				<div class="py-1.5 md:py-3 flex justify-center items-center w-full">
+					<div 
+						id="category-nav" 
+						class="rounded-full p-1 md:p-2 overflow-x-auto hide-scrollbar max-w-full touch-pan-x scroll-smooth"
+						style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;"
+					>
+						<div class="flex items-center gap-1 md:gap-2 min-w-max px-0.5 md:px-1">
+							{menuEntries.map((entry, i) => (
+									<a 
+									href={`#${entry.data.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}`}
+									class="category-pill font-bold uppercase tracking-wider text-[10px] md:text-sm whitespace-nowrap px-3 md:px-6 py-2 md:py-3 rounded-full flex items-center justify-center min-h-[38px] md:min-h-[44px] min-w-[38px] md:min-w-[44px] select-none focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
+									style="scroll-snap-align: center;"
+									data-category={entry.data.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+								>
+									{entry.data.title}
+								</a>
+							))}
+						</div>
+					</div>
+				</div>
+            </nav>
+
+			<div class="space-y-10 md:space-y-16">
+				{menuEntries.map(entry => (
+					<MenuList 
+                        id={entry.data.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+                        title={entry.data.title} 
+                        items={entry.data.items} 
+                    />
+				))}
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style is:global>
+	/* Hide scrollbar on category nav */
+	.hide-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.hide-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* ── Pillow Liquid Glass: pill container ── */
+	#category-nav {
+		background: rgba(235, 235, 240, 0.6);
+		backdrop-filter: blur(24px) saturate(150%);
+		-webkit-backdrop-filter: blur(24px) saturate(150%);
+		background-clip: padding-box;
+		box-shadow:
+			0 8px 32px rgba(0, 0, 0, 0.04),
+			inset 0 1px 2px rgba(255, 255, 255, 0.8),
+			inset 0 -1px 2px rgba(255, 255, 255, 0.4),
+			inset 0 4px 10px rgba(0, 0, 0, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		position: relative;
+	}
+
+	/* ── Inactive pill ── */
+	.category-pill {
+		position: relative;
+		color: #6e6e73;
+		background: transparent;
+		transition: all 400ms cubic-bezier(0.25, 1, 0.5, 1);
+	}
+
+	/* Glass sheen on hover */
+	.category-pill:hover:not(.is-active) {
+		background: rgba(255, 255, 255, 0.60);
+		box-shadow:
+			0 2px 8px rgba(0, 0, 0, 0.02);
+		color: #1d1d1f;
+		border-radius: 9999px;
+	}
+
+	/* ── Active pill: 3D Pillow Effect ── */
+	.category-pill.is-active {
+		background: #ffffff;
+		color: #1d1d1f;
+		box-shadow:
+			0 4px 12px rgba(0, 0, 0, 0.08),
+			0 1px 2px rgba(0, 0, 0, 0.04),
+			inset 0 1px 1px rgba(255, 255, 255, 1),
+			inset 0 -1px 2px rgba(230, 230, 235, 0.8);
+		border-radius: 9999px;
+		border: 1px solid rgba(255, 255, 255, 0.9);
+		transform: scale(1.02);
+	}
+
+	/* Reduced motion */
+	@media (prefers-reduced-motion: reduce) {
+		.category-pill {
+			transition: none !important;
+		}
+	}
+</style>
+
+<script>
+	let headerMaxH = 121;
+	let headerMinH = 70;
+
+	// ── Pre-calculate exact heights for fluid 60fps animations ──
+	function measureHeaderHeights() {
+		const header = document.getElementById('main-header');
+		if (!header) return;
+
+		// Clone header to safely measure both states instantly without any visual flickering
+		const clone = header.cloneNode(true) as HTMLElement;
+		clone.style.visibility = 'hidden';
+		clone.style.position = 'fixed';
+		clone.style.transition = 'none';
+        
+        // Disable transitions on all children of clone so we can measure the final state instantly
+        const allElements = clone.querySelectorAll('*');
+        allElements.forEach(el => {
+            (el as HTMLElement).style.transition = 'none';
+        });
+
+		document.body.appendChild(clone);
+
+		// Measure full size
+		clone.classList.remove('is-scrolled');
+		headerMaxH = clone.getBoundingClientRect().height;
+
+		// Measure compact size
+		clone.classList.add('is-scrolled');
+		headerMinH = clone.getBoundingClientRect().height;
+
+		document.body.removeChild(clone);
+	}
+
+	function applyHeaderHeights() {
+		const header = document.getElementById('main-header');
+		const spacer = document.getElementById('header-spacer');
+		if (!header) return;
+
+		if (spacer) {
+            // Spacer always holds the max height to prevent page layout shifts
+            const current = parseFloat(spacer.style.height) || 0;
+            if (headerMaxH > current) spacer.style.height = `${headerMaxH}px`;
+        }
+
+		const isScrolled = header.classList.contains('is-scrolled');
+		document.documentElement.style.setProperty('--header-h', `${isScrolled ? headerMinH : headerMaxH}px`);
+	}
+
+	function syncHeaderHeight() {
+		const header = document.getElementById('main-header');
+		if (!header) return;
+
+		measureHeaderHeights();
+		applyHeaderHeights();
+
+		// Watch for class toggle to instantly set target height variable
+		// Native CSS "transition: top 500ms ease-in-out" ensures zero JS layout-thrashing on scroll
+		new MutationObserver(() => {
+			applyHeaderHeights();
+		}).observe(header, { attributes: true, attributeFilter: ['class'] });
+
+		// Re-measure on orientation change / resize
+        let resizeTimer: ReturnType<typeof setTimeout>;
+		window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+			    measureHeaderHeights();
+			    applyHeaderHeights();
+            }, 100);
+		}, { passive: true });
+	}
+
+	// ── ScrollSpy: highlight the active category pill ──
+	function initScrollSpy() {
+		const pills = document.querySelectorAll<HTMLAnchorElement>('.category-pill');
+		const nav = document.getElementById('category-nav');
+		if (!pills.length || !nav) return;
+
+		// Build section map from pills (preserves DOM order)
+		const sections: HTMLElement[] = [];
+		pills.forEach(pill => {
+			const id = pill.dataset.category;
+			if (id) {
+				const el = document.getElementById(id);
+				if (el) sections.push(el);
+			}
+		});
+		if (!sections.length) return;
+
+		let currentActive: string | null = null;
+
+		function setActive(id: string) {
+			if (id === currentActive) return;
+			currentActive = id;
+
+			pills.forEach(pill => {
+				const isActive = pill.dataset.category === id;
+				pill.classList.toggle('is-active', isActive);
+				pill.setAttribute('aria-current', isActive ? 'true' : 'false');
+
+				// Auto-scroll the active pill into view horizontally
+				if (isActive && nav) {
+					const navRect = nav.getBoundingClientRect();
+					const scrollLeft = (pill as HTMLElement).offsetLeft
+						- nav.offsetLeft
+						- (navRect.width / 2)
+						+ ((pill as HTMLElement).offsetWidth / 2);
+					nav.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+				}
+			});
+		}
+
+		// ── Position-based scroll-spy ──
+		// Finds which section's top is closest to — but still above — a detection
+		// line at 35% from the top of the viewport. Works reliably regardless of
+		// section height (fixes IntersectionObserver miss on short sections like SECONDI).
+		function findActiveSection(): string {
+			const headerH = parseFloat(
+				getComputedStyle(document.documentElement).getPropertyValue('--header-h')
+			) || 100;
+			// Detection line: header bottom + half the remaining space
+			const triggerY = window.scrollY + headerH + (window.innerHeight - headerH) * 0.25;
+
+			let activeId = sections[0].id;
+			for (const section of sections) {
+				if (section.offsetTop <= triggerY) {
+					activeId = section.id;
+				}
+			}
+			return activeId;
+		}
+
+		// Update on scroll (throttled with requestAnimationFrame)
+		let rafPending = false;
+		function onScroll() {
+			if (rafPending) return;
+			rafPending = true;
+			requestAnimationFrame(() => {
+				setActive(findActiveSection());
+				rafPending = false;
+			});
+		}
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+
+		// Immediate feedback on pill click (don't wait for scroll)
+		pills.forEach(pill => {
+			pill.addEventListener('click', () => {
+				const id = pill.dataset.category;
+				if (id) setActive(id);
+			});
+		});
+
+		// Set initial active state
+		setActive(findActiveSection());
+	}
+
+	// ── Initialization ──
+	// Measure in three phases to always capture late-loading web fonts (like Cormorant Garamond)
+	// Phase 1: DOMContentLoaded
+	document.addEventListener('DOMContentLoaded', () => {
+		syncHeaderHeight();
+		initScrollSpy();
+	});
+
+	// Phase 2: Fonts ready
+	document.fonts.ready.then(() => {
+		measureHeaderHeights();
+		applyHeaderHeights();
+	});
+
+	// Phase 3: Window load
+	window.addEventListener('load', () => {
+		measureHeaderHeights();
+		applyHeaderHeights();
+	});
+</script>

@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import StarDishes from '../components/StarDishes.astro';
+import MenuAccordion from '../components/MenuAccordion.astro';
+import LocationBlock from '../components/LocationBlock.astro';
+import { Image } from 'astro:assets';
+
+const title = "Delogo – Cucina Greca Autentica a Bologna";
+const description = "Ristorante greco autentico nel cuore di Bologna, quartiere Cirenaica. Piatti tradizionali: Moussakas, Suvlaki, Tzatziki e molto altro.";
+---
+
+<Layout title={title} description={description}>
+	<Header />
+	<main>
+		<Hero />
+		
+		<!-- USP Section: Perché Delogo (Bento Grid) -->
+		<section class="py-24 bg-background">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl md:text-4xl text-center mb-16 font-serif font-bold text-primary">Un Assaggio di Egeo</h2>
+				
+                <div class="space-y-32 mt-20">
+                    <!-- Chapter 1: L'Origine -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 group">
+                        <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-xl relative aspect-[4/3]">
+                            <Image 
+                                src="https://images.unsplash.com/photo-1515443961808-8b920566ce05?q=80&w=2070&auto=format&fit=crop" 
+                                alt="I paesaggi e i sapori dell'Egeo" 
+                                width={1200} 
+                                height={900}
+                                loading="lazy"
+                                fetchpriority="low"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div class="absolute inset-0 bg-black/5 transition-colors duration-300 group-hover:bg-black/0"></div>
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <span class="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">Capitolo I</span>
+                            <h3 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">La Nostra Filosofia</h3>
+                            <p class="text-xl text-gray-600 leading-relaxed font-sans">
+                                Portiamo a Bologna le ricette autentiche delle isole greche, dove abbiamo imparato che per mangiare bene servono sole, mare e dedizione. Vogliamo farti assaggiare la vera Grecia e la sua cultura dell'ospitalità, senza bisogno di prendere un aereo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2: Gli Ingredienti -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24 group">
+                        <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-xl relative aspect-[4/3]">
+                            <Image 
+                                src="https://images.unsplash.com/photo-1621217642630-f4639e31d3db?q=80&w=2072&auto=format&fit=crop" 
+                                alt="Ingredienti freschi e autentici greci" 
+                                width={1200} 
+                                height={900}
+                                loading="lazy"
+                                fetchpriority="low"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div class="absolute inset-0 bg-black/5 transition-colors duration-300 group-hover:bg-black/0"></div>
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6 text-left md:text-right">
+                            <span class="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">Capitolo II</span>
+                            <h3 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">Materia Prima Autentica</h3>
+                            <p class="text-xl text-gray-600 leading-relaxed font-sans">
+                                Non ci sono compromessi nella nostra cucina, solo il sapore puro del Mediterraneo. Facciamo arrivare la vera Feta DOP, le olive e il nostro olio extravergine direttamente dalla Grecia, per garantirti quel gusto inconfondibile e genuino.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3: L'Incontro -->
+                    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24 group">
+                        <div class="w-full md:w-1/2 overflow-hidden rounded-2xl shadow-xl relative aspect-[4/3]">
+                            <Image 
+                                src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop" 
+                                alt="Convivialità e ospitalità al ristorante" 
+                                width={1200} 
+                                height={900}
+                                loading="lazy"
+                                fetchpriority="low"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div class="absolute inset-0 bg-black/5 transition-colors duration-300 group-hover:bg-black/0"></div>
+                        </div>
+                        <div class="w-full md:w-1/2 space-y-6">
+                            <span class="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">Capitolo III</span>
+                            <h3 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">La Convivialità</h3>
+                            <p class="text-xl text-gray-600 leading-relaxed font-sans">
+                                Il cuore dell'esperienza greca è lo stare insieme. Varcare la soglia di Delogo in Cirenaica significa sedersi a una tavola mediterranea: un bicchiere di Retsina profumata, cibo che fa bene all'anima e il tempo che rallenta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</section>
+		<StarDishes />
+		<MenuAccordion />
+		<LocationBlock />
+	</main>
+	<Footer />
+</Layout>

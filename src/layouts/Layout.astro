@@ -1,0 +1,60 @@
+---
+import SEOHead from '../components/SEOHead.astro';
+import BackToTop from '../components/BackToTop.astro';
+import '../styles/global.css';
+import '@fontsource/marcellus';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+const { currentLocale } = Astro;
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+	<head>
+		<SEOHead title={title} description={description} />
+	</head>
+	<body class="bg-paper text-slate font-marcellus min-h-screen flex flex-col">
+		<slot />
+        <BackToTop />
+		<style is:global>
+			:root {
+				--blue-egeo: #4B9CD3;
+				--rosso-corallo: #D14638;
+				--grigio-ardesia: #2F4F4F;
+				--warm-paper: #FFFFFF;
+			}
+
+			body {
+				font-family: 'Tenor Sans', sans-serif;
+				background-color: var(--warm-paper);
+			}
+			
+			h1, h2, h3, h4, h5, h6, .font-serif {
+				font-family: 'Marcellus', serif;
+			}
+			
+			.cta-button {
+				background-color: var(--rosso-corallo);
+				color: white;
+				transition: transform 0.2s ease-in-out;
+			}
+			
+			.cta-button:hover {
+				transform: scale(1.05);
+			}
+
+			footer a:focus-visible, 
+			header a:focus-visible, 
+			button:focus-visible {
+				outline: 3px solid var(--blue-egeo);
+				outline-offset: 4px;
+				border-radius: 4px;
+			}
+		</style>
+	</body>
+</html>

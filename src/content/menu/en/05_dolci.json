@@ -1,0 +1,54 @@
+{
+    "title": "DOLCI",
+    "order": 5,
+    "items": [
+        {
+            "id": "yogurt",
+            "name": "Yogurt Greco",
+            "price": 5.0,
+            "description": "Con miele e mandorle o con amarene caramellate"
+        },
+        {
+            "id": "kantaifi",
+            "name": "Kantaifi",
+            "price": 5.0,
+            "description": "Sfogliata di capelli d’angelo con mandorle, noci e miele"
+        },
+        {
+            "id": "baklavas",
+            "name": "Baklavas",
+            "price": 5.0,
+            "description": "Strati di pasta fillo con frutta secca e miele"
+        },
+        {
+            "id": "galaktobureko",
+            "name": "Galaktobureko",
+            "price": 5.0,
+            "description": "Sfogliata di pasta fillo ripiena con crema"
+        },
+        {
+            "id": "chalvas",
+            "name": "Chalvas",
+            "price": 5.0,
+            "description": "Torroncino greco di sesamo al pistacchio"
+        },
+        {
+            "id": "ekmek",
+            "name": "Ekmek",
+            "price": 5.0,
+            "description": "Tortino con crema al cocco e masticha"
+        },
+        {
+            "id": "portokalopita",
+            "name": "Portokalopita",
+            "price": 5.0,
+            "description": "Torta all’arancio con bagna di sciroppo"
+        },
+        {
+            "id": "sarikopites",
+            "name": "Sarikopites Me Meli",
+            "price": 5.0,
+            "description": "Sfogliatina ripiena di ricotta con miele e cannella"
+        }
+    ]
+}

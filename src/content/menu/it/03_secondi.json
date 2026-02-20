@@ -1,0 +1,80 @@
+{
+    "title": "SECONDI",
+    "order": 3,
+    "items": [
+        {
+            "id": "gemista",
+            "name": "Gemista",
+            "price": 11.0,
+            "description": "Verdure al forno ripiene con riso, uvetta e pinoli"
+        },
+        {
+            "id": "imam",
+            "name": "Imam",
+            "price": 11.0,
+            "description": "Melanzane al forno con pomodori, verdure e feta"
+        },
+        {
+            "id": "moussakas",
+            "name": "Moussakas",
+            "price": 12.0,
+            "description": "Sformato con melanzane, patate, zucchine, ragù e besciamella",
+            "isStar": true
+        },
+        {
+            "id": "sutzukakia",
+            "name": "Sutzukakia",
+            "price": 12.0,
+            "description": "Polpette di manzo e agnello in umido servite con riso"
+        },
+        {
+            "id": "tas-kebap",
+            "name": "Tas Kebap",
+            "price": 14.0,
+            "description": "Stracotto di manzo speziato servito con riso"
+        },
+        {
+            "id": "suvlaki",
+            "name": "Suvlaki",
+            "price": 12.0,
+            "description": "Spiedini di maiale serviti con insalata e tzatziki",
+            "isStar": true
+        },
+        {
+            "id": "kotosouvlaki",
+            "name": "Kotosouvlaki",
+            "price": 13.0,
+            "description": "Spiedini di pollo serviti con insalata e senape greca"
+        },
+        {
+            "id": "arnosuvlaki",
+            "name": "Arnosuvlaki",
+            "price": 18.0,
+            "description": "Spiedo di agnello 300 gr. con patate e senape greca"
+        },
+        {
+            "id": "bifteki",
+            "name": "Bifteki",
+            "price": 12.0,
+            "description": "Polpette schiacciate di manzo alla griglia servite con patate e tzatziki"
+        },
+        {
+            "id": "lukanika",
+            "name": "Lukanika",
+            "price": 14.0,
+            "description": "Salsicce d’agnello e suino alla griglia servite con patate e tirokafteri"
+        },
+        {
+            "id": "chtapodi",
+            "name": "Chtapodi Psito",
+            "price": 17.0,
+            "description": "Polpo alla griglia con purea di fave secche"
+        },
+        {
+            "id": "bakaliaros",
+            "name": "Bakaliaros",
+            "price": 15.0,
+            "description": "Baccalà al forno con patate, pomodorini, cipolle e olive"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+// @ts-check
+import { defineConfig } from 'astro/config';
+import tailwind from '@tailwindcss/vite';
+
+// https://astro.build/config
+export default defineConfig({
+    site: 'https://delogo.it',
+    vite: {
+        plugins: [tailwind()],
+    },
+    image: {
+        domains: ['images.unsplash.com'],
+        remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
+    },
+    i18n: {
+        defaultLocale: "it",
+        locales: ["it", "en"],
+        routing: {
+            prefixDefaultLocale: false
+        }
+    },
+});

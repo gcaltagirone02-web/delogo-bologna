@@ -1,0 +1,107 @@
+{
+    "title": "ANTIPASTI",
+    "order": 1,
+    "items": [
+        {
+            "id": "tzatziki",
+            "name": "Tzatziki",
+            "price": 5.0,
+            "description": "Crema con yogurt greco, cetriolo, aglio e aneto"
+        },
+        {
+            "id": "tirokafteri",
+            "name": "Tirokafteri",
+            "price": 5.0,
+            "description": "Crema con feta, ricotta e peperoncino"
+        },
+        {
+            "id": "melinzanosalata",
+            "name": "Melinzanosalata",
+            "price": 5.0,
+            "description": "Crema con melanzane affumicate e yogurt"
+        },
+        {
+            "id": "agliada",
+            "name": "Agliada",
+            "price": 5.0,
+            "description": "Crema di patate con aglio e mandorle"
+        },
+        {
+            "id": "fava",
+            "name": "Fava",
+            "price": 5.0,
+            "description": "Crema di cicerchie di Santorini con cipolle caramellate e capperi"
+        },
+        {
+            "id": "olive-greche",
+            "name": "Olive Greche",
+            "price": 5.0,
+            "description": "Kalamata / Amfissa / Thassos"
+        },
+        {
+            "id": "dolmadakia",
+            "name": "Dolmadakia",
+            "price": 7.0,
+            "description": "Involtini di foglie di vite ripieni con riso, spinaci ed erbette aromatiche cotti al vapore"
+        },
+        {
+            "id": "chortopites",
+            "name": "Chortopites",
+            "price": 6.0,
+            "description": "Ravioli cretesi fritti ripieni con erbette miste"
+        },
+        {
+            "id": "melinzanokeftedes",
+            "name": "Melinzanokeftedes",
+            "price": 6.0,
+            "description": "Involtini di melanzane con ricotta e feta"
+        },
+        {
+            "id": "kolokithokeftedes",
+            "name": "Kolokithokeftedes",
+            "price": 6.0,
+            "description": "Polpette di zucca oppure zucchine, feta e aneto"
+        },
+        {
+            "id": "favokeftedes",
+            "name": "Favokeftedes",
+            "price": 6.0,
+            "description": "Polpette di cicerchie, mentuccia"
+        },
+        {
+            "id": "tirokeftedes",
+            "name": "Tirokeftedes",
+            "price": 6.0,
+            "description": "Polpette di formaggi greci"
+        },
+        {
+            "id": "feta-olive",
+            "name": "Feta e Olive del Kalamata",
+            "price": 6.0
+        },
+        {
+            "id": "feta-forno",
+            "name": "Feta al Forno",
+            "price": 6.0,
+            "description": "Con pomodoro, olive e peperoni"
+        },
+        {
+            "id": "feta-burekaki",
+            "name": "Feta Burekaki",
+            "price": 7.0,
+            "description": "In crosta di pasta fillo con miele e sesamo"
+        },
+        {
+            "id": "hallumi",
+            "name": "Hallumi Saganaki",
+            "price": 6.0,
+            "description": "Formaggio di latte misto aromatizzato con foglie di menta fresca, fritto oppure alla griglia"
+        },
+        {
+            "id": "manuri",
+            "name": "Manuri",
+            "price": 6.0,
+            "description": "Formaggio fresco di pecora cotto alla griglia con olio EVO e origano, oppure con miele e sesamo nero"
+        }
+    ]
+}

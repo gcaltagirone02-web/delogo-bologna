@@ -1,0 +1,58 @@
+{
+    "title": "VINI & BEVANDE",
+    "order": 6,
+    "items": [
+        {
+            "id": "vino-caraffa",
+            "name": "Vino in caraffa (1 Lt)",
+            "price": 11.0,
+            "description": "Bianco, Rosso, Rosé, Retsina"
+        },
+        {
+            "id": "kechribari",
+            "name": "Retsina Kechribari (0,5 Lt)",
+            "price": 9.50
+        },
+        {
+            "id": "papagiannakos",
+            "name": "Retsina Papagiannakos",
+            "price": 16.0
+        },
+        {
+            "id": "moschofilero",
+            "name": "Moschofilero (Bianco)",
+            "price": 19.0
+        },
+        {
+            "id": "malaguzia",
+            "name": "Malaguzia (Bianco)",
+            "price": 20.0
+        },
+        {
+            "id": "agiorgitiko",
+            "name": "Agiorgitiko (Rosso)",
+            "price": 19.0
+        },
+        {
+            "id": "birra-vergina",
+            "name": "Vergina Lager",
+            "price": 4.0
+        },
+        {
+            "id": "birra-spina",
+            "name": "Birra Alla Spina (Caraffa 1 Lt)",
+            "price": 11.0
+        },
+        {
+            "id": "bibite",
+            "name": "Bibite Greche",
+            "price": 3.0,
+            "description": "Cola, Aranciata, Limonata"
+        },
+        {
+            "id": "uzo-tsikudia",
+            "name": "Uzo / Tsikudia / Metaxa 5*",
+            "price": 3.0
+        }
+    ]
+}

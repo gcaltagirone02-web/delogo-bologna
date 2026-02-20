@@ -1,0 +1,21 @@
+{
+    "title": "CONTORNI",
+    "order": 4,
+    "items": [
+        {
+            "id": "patate-fritte",
+            "name": "Patate fritte rustiche aromatizzate",
+            "price": 4.0
+        },
+        {
+            "id": "riso-vapore",
+            "name": "Riso al vapore",
+            "price": 4.0
+        },
+        {
+            "id": "pita",
+            "name": "Pita vuota",
+            "price": 1.0
+        }
+    ]
+}

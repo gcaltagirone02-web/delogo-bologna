@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Hero from '../../components/Hero.astro';
+
+const title = "Delogo – Authentic Greek Cuisine in Bologna";
+const description = "Authentic Greek restaurant in the heart of Bologna. Traditional dishes: Moussakas, Suvlaki, Tzatziki, and more.";
+---
+
+<Layout title={title} description={description}>
+	<Header />
+	<main>
+		<Hero />
+		
+		<!-- USP Section -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl mb-12">Why choose Delogo?</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+					<div class="p-6 bg-blue-50 rounded-2xl">
+						<div class="text-4xl mb-4">🇬🇷</div>
+						<h3 class="text-xl mb-2">Authenticity</h3>
+						<p>Traditional recipes and selected ingredients to bring you the true taste of Greece.</p>
+					</div>
+					<div class="p-6 bg-blue-50 rounded-2xl">
+						<div class="text-4xl mb-4">🏠</div>
+						<h3 class="text-xl mb-2">Hospitable</h3>
+						<p>A warm and welcoming atmosphere in the heart of Bologna's Cirenaica district.</p>
+					</div>
+					<div class="p-6 bg-blue-50 rounded-2xl">
+						<div class="text-4xl mb-4">⭐</div>
+						<h3 class="text-xl mb-2">Social Proof</h3>
+						<p>Rated 4.4/5 on Tripadvisor. Our customers' satisfaction is our priority.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

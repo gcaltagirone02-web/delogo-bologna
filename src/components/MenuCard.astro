@@ -37,7 +37,16 @@ const recommendedLabel = currentLocale === 'en' ? 'Recommended' : 'Consigliato';
   )}
 
   <!-- Organic divider on hover -->
-  <div class="mt-4 md:mt-6 flex justify-end opacity-0 group-hover:opacity-40 transition-opacity duration-300">
-    <div class="w-12 h-[1px] bg-primary"></div>
+  <div class="mt-4 md:mt-6 flex justify-end opacity-0 group-hover:opacity-60 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">
+    <svg class="w-16 h-3 text-primary/40" viewBox="0 0 100 20" preserveAspectRatio="none">
+        <path d="M0 10 Q 15 2 30 10 T 60 10 T 100 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
   </div>
 </div>
+
+<style>
+    .group {
+        /* Subtlest irregular edge to avoid perfect digital corners */
+        clip-path: polygon(0.2% 0.5%, 99.8% 0%, 100% 99.5%, 0.5% 100%);
+    }
+</style>

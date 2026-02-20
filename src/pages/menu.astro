@@ -33,32 +33,29 @@ const description = "Scopri il nostro menù autentico: antipasti tipici, secondi
 				<p class="text-slate/80 italic text-base md:text-lg">"L'essenza della Grecia in ogni piatto"</p>
 			</div>
 			
-            <!-- Floating Category Navigation -->
+            <!-- Organic Category Navigation -->
             <nav 
 				id="category-nav-wrapper"
-				class="sticky z-40 mb-6 md:mb-16 w-full transform-gpu"
-				style="top: calc(var(--header-h, 121px) + 8px); transition: top 500ms ease-in-out; will-change: top;"
+				class="sticky z-40 mb-10 md:mb-20 w-full transform-gpu scroll-fade-edges"
+				style="top: calc(var(--header-h, 121px) + 4px); transition: top 500ms ease-in-out; will-change: top;"
 				role="navigation" 
 				aria-label="Categorie menù"
 			>
-				<div class="py-1.5 md:py-3 flex justify-center items-center w-full">
+				<div class="py-2 md:py-4 flex justify-center items-center w-full bg-paper/80 backdrop-blur-sm border-y border-primary/5">
 					<div 
 						id="category-nav" 
-						class="rounded-full p-1 md:p-2 overflow-x-auto hide-scrollbar max-w-full touch-pan-x scroll-smooth"
-						style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;"
+						class="flex gap-2 md:gap-4 overflow-x-auto hide-scrollbar max-w-full touch-pan-x scroll-smooth px-6 md:px-10 scroll-snap-x"
+						style="-webkit-overflow-scrolling: touch;"
 					>
-						<div class="flex items-center gap-1 md:gap-2 min-w-max px-0.5 md:px-1">
-							{menuEntries.map((entry, i) => (
-									<a 
-									href={`#${entry.data.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}`}
-									class="category-pill font-bold uppercase tracking-wider text-[10px] md:text-sm whitespace-nowrap px-3 md:px-6 py-2 md:py-3 rounded-full flex items-center justify-center min-h-[38px] md:min-h-[44px] min-w-[38px] md:min-w-[44px] select-none focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
-									style="scroll-snap-align: center;"
-									data-category={entry.data.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
-								>
-									{entry.data.title}
-								</a>
-							))}
-						</div>
+                        {menuEntries.map((entry, i) => (
+                                <a 
+                                href={`#${entry.data.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}`}
+                                class="category-pill font-marcellus uppercase tracking-widest text-[11px] md:text-sm whitespace-nowrap px-4 md:px-8 py-2.5 md:py-3.5 rounded-full flex items-center justify-center min-h-[44px] select-none snap-center transition-all duration-300"
+                                data-category={entry.data.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+                            >
+                                {entry.data.title}
+                            </a>
+                        ))}
 					</div>
 				</div>
             </nav>
@@ -87,50 +84,27 @@ const description = "Scopri il nostro menù autentico: antipasti tipici, secondi
 		display: none;
 	}
 
-	/* ── Pillow Liquid Glass: pill container ── */
-	#category-nav {
-		background: rgba(235, 235, 240, 0.6);
-		backdrop-filter: blur(24px) saturate(150%);
-		-webkit-backdrop-filter: blur(24px) saturate(150%);
-		background-clip: padding-box;
-		box-shadow:
-			0 8px 32px rgba(0, 0, 0, 0.04),
-			inset 0 1px 2px rgba(255, 255, 255, 0.8),
-			inset 0 -1px 2px rgba(255, 255, 255, 0.4),
-			inset 0 4px 10px rgba(0, 0, 0, 0.02);
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		position: relative;
+	/* ── Organic Navigation Styles ── */
+	#category-nav-wrapper {
+		/* Minimalist strip look */
 	}
 
-	/* ── Inactive pill ── */
 	.category-pill {
-		position: relative;
-		color: #6e6e73;
-		background: transparent;
-		transition: all 400ms cubic-bezier(0.25, 1, 0.5, 1);
+		color: var(--color-slate);
+		opacity: 0.6;
 	}
 
-	/* Glass sheen on hover */
-	.category-pill:hover:not(.is-active) {
-		background: rgba(255, 255, 255, 0.60);
-		box-shadow:
-			0 2px 8px rgba(0, 0, 0, 0.02);
-		color: #1d1d1f;
-		border-radius: 9999px;
+	.category-pill:hover {
+		opacity: 1;
+		color: var(--color-primary);
 	}
 
-	/* ── Active pill: 3D Pillow Effect ── */
 	.category-pill.is-active {
-		background: #ffffff;
-		color: #1d1d1f;
-		box-shadow:
-			0 4px 12px rgba(0, 0, 0, 0.08),
-			0 1px 2px rgba(0, 0, 0, 0.04),
-			inset 0 1px 1px rgba(255, 255, 255, 1),
-			inset 0 -1px 2px rgba(230, 230, 235, 0.8);
-		border-radius: 9999px;
-		border: 1px solid rgba(255, 255, 255, 0.9);
-		transform: scale(1.02);
+		opacity: 1;
+		color: var(--color-primary);
+		background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+		/* The organic shape utility is applied via JS/added below */
+		border-radius: 68% 32% 44% 56% / 46% 52% 48% 54%;
 	}
 
 	/* Reduced motion */

@@ -1,5 +1,4 @@
 ---
-
 interface Props {
   title?: string;
   description?: string;
@@ -7,13 +6,13 @@ interface Props {
 }
 
 const { currentLocale } = Astro;
-const locale = currentLocale || 'it';
-const isIt = locale === 'it';
+const locale = currentLocale || "it";
+const isIt = locale === "it";
 
 // SEO Defaults & Keywords
 
-const defaultTitle = isIt 
-  ? "Ristorante Greco Bologna | Delogo Cucina Greca Cirenaica" 
+const defaultTitle = isIt
+  ? "Ristorante Greco Bologna | Delogo Cucina Greca Cirenaica"
   : "Greek Restaurant Bologna | Delogo Authentic Greek Cuisine";
 const defaultDescription = isIt
   ? "Cerchi un ristorante greco a Bologna? Delogo offre l'autentica cucina greca in Cirenaica. Moussaka, Suvlaki e Tzatziki fatti in casa. Prenota ora!"
@@ -21,71 +20,77 @@ const defaultDescription = isIt
 
 const title = Astro.props.title || defaultTitle;
 const description = Astro.props.description || defaultDescription;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://delogo.it');
-const imageURL = new URL(Astro.props.image || '/placeholder-social.jpg', Astro.site || 'https://delogo.it');
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site || "https://delogo.it",
+);
+const imageURL = new URL(
+  Astro.props.image || "/placeholder-social.jpg",
+  Astro.site || "https://delogo.it",
+);
 
 // Schema.org JSON-LD
 const schema = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  "name": "Delogo – Cucina Greca",
-  "image": imageURL.toString(),
+  name: "Delogo – Cucina Greca",
+  image: imageURL.toString(),
   "@id": "https://delogo.it/#restaurant",
-  "url": "https://delogo.it",
-  "telephone": "+39051245734",
-  "priceRange": "€€",
-  "servesCuisine": "Greek",
-  "address": {
+  url: "https://delogo.it",
+  telephone: "+39051245734",
+  priceRange: "€€",
+  servesCuisine: "Greek",
+  address: {
     "@type": "PostalAddress",
-    "streetAddress": "Via Giovanna Zaccherini Alvisi 19/d",
-    "addressLocality": "Bologna",
-    "postalCode": "40138",
-    "addressRegion": "BO",
-    "addressCountry": "IT"
+    streetAddress: "Via Giovanna Zaccherini Alvisi 19/d",
+    addressLocality: "Bologna",
+    postalCode: "40138",
+    addressRegion: "BO",
+    addressCountry: "IT",
   },
-  "geo": {
+  geo: {
     "@type": "GeoCoordinates",
-    "latitude": 44.4949, // Approximate for Bologna zone, should be refined if possible
-    "longitude": 11.3653
+    latitude: 44.4949, // Approximate for Bologna zone, should be refined if possible
+    longitude: 11.3653,
   },
-  "openingHoursSpecification": [
+  openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
-      "opens": "19:30",
-      "closes": "22:30"
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday"],
+      opens: "19:30",
+      closes: "22:30",
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Friday",
-      "opens": "19:15",
-      "closes": "22:30"
+      dayOfWeek: "Friday",
+      opens: "19:15",
+      closes: "22:30",
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "19:15",
-      "closes": "22:45"
+      dayOfWeek: "Saturday",
+      opens: "19:15",
+      closes: "22:45",
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Sunday",
-      "opens": "12:30",
-      "closes": "15:00"
+      dayOfWeek: "Sunday",
+      opens: "12:30",
+      closes: "15:00",
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Sunday",
-      "opens": "19:30",
-      "closes": "22:30"
-    }
+      dayOfWeek: "Sunday",
+      opens: "19:30",
+      closes: "22:30",
+    },
   ],
-  "hasMenu": "https://delogo.it/menu",
-  "aggregateRating": {
+  hasMenu: "https://delogo.it/menu",
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "4.4",
-    "reviewCount": "50" // Placeholder based on brief
-  }
+    ratingValue: "4.4",
+    reviewCount: "50", // Placeholder based on brief
+  },
 };
 ---
 
@@ -102,7 +107,10 @@ const schema = {
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="keywords" content="Ristorante greco Bologna, Cucina greca Cirenaica, Moussaka Bologna, Delogo, Ristorante Greco Cirenaica" />
+<meta
+  name="keywords"
+  content="Ristorante greco Bologna, Cucina greca Cirenaica, Moussaka Bologna, Delogo, Ristorante Greco Cirenaica"
+/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -119,10 +127,8 @@ const schema = {
 <meta property="twitter:image" content={imageURL} />
 
 <!-- JSON-LD -->
-<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
-
-<!-- Fonts Preload -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;700&display=swap" as="style" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify(schema)}
+/>

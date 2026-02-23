@@ -1,36 +1,37 @@
 {
     "title": "ANTIPASTI",
+    "titleEn": "STARTERS",
     "order": 1,
     "items": [
         {
             "id": "tzatziki",
             "name": "Tzatziki",
             "price": 5.0,
-            "description": "Crema con yogurt greco, cetriolo, aglio e aneto"
+            "description": "Cream with Greek yogurt, cucumber, garlic and dill"
         },
         {
             "id": "tirokafteri",
             "name": "Tirokafteri",
             "price": 5.0,
-            "description": "Crema con feta, ricotta e peperoncino"
+            "description": "Cream with feta, ricotta and chili pepper"
         },
         {
             "id": "melinzanosalata",
             "name": "Melinzanosalata",
             "price": 5.0,
-            "description": "Crema con melanzane affumicate e yogurt"
+            "description": "Cream with smoked eggplant and yogurt"
         },
         {
             "id": "agliada",
             "name": "Agliada",
             "price": 5.0,
-            "description": "Crema di patate con aglio e mandorle"
+            "description": "Potato cream with garlic and almonds"
         },
         {
             "id": "fava",
             "name": "Fava",
             "price": 5.0,
-            "description": "Crema di cicerchie di Santorini con cipolle caramellate e capperi"
+            "description": "Santorini fava bean cream with caramelized onions and capers"
         },
         {
             "id": "olive-greche",
@@ -42,66 +43,66 @@
             "id": "dolmadakia",
             "name": "Dolmadakia",
             "price": 7.0,
-            "description": "Involtini di foglie di vite ripieni con riso, spinaci ed erbette aromatiche cotti al vapore"
+            "description": "Steamed vine leaf rolls filled with rice, spinach and mixed herbs"
         },
         {
             "id": "chortopites",
             "name": "Chortopites",
             "price": 6.0,
-            "description": "Ravioli cretesi fritti ripieni con erbette miste"
+            "description": "Fried Cretan ravioli filled with mixed herbs"
         },
         {
             "id": "melinzanokeftedes",
             "name": "Melinzanokeftedes",
             "price": 6.0,
-            "description": "Involtini di melanzane con ricotta e feta"
+            "description": "Eggplant rolls with ricotta and feta"
         },
         {
             "id": "kolokithokeftedes",
             "name": "Kolokithokeftedes",
             "price": 6.0,
-            "description": "Polpette di zucca oppure zucchine, feta e aneto"
+            "description": "Pumpkin or zucchini fritters with feta and dill"
         },
         {
             "id": "favokeftedes",
             "name": "Favokeftedes",
             "price": 6.0,
-            "description": "Polpette di cicerchie, mentuccia"
+            "description": "Fava bean fritters, wild mint"
         },
         {
             "id": "tirokeftedes",
             "name": "Tirokeftedes",
             "price": 6.0,
-            "description": "Polpette di formaggi greci"
+            "description": "Greek cheese fritters"
         },
         {
             "id": "feta-olive",
-            "name": "Feta e Olive del Kalamata",
+            "name": "Feta and Kalamata Olives",
             "price": 6.0
         },
         {
             "id": "feta-forno",
-            "name": "Feta al Forno",
+            "name": "Baked Feta",
             "price": 6.0,
-            "description": "Con pomodoro, olive e peperoni"
+            "description": "With tomato, olives and peppers"
         },
         {
             "id": "feta-burekaki",
             "name": "Feta Burekaki",
             "price": 7.0,
-            "description": "In crosta di pasta fillo con miele e sesamo"
+            "description": "In phyllo crust with honey and sesame"
         },
         {
             "id": "hallumi",
             "name": "Hallumi Saganaki",
             "price": 6.0,
-            "description": "Formaggio di latte misto aromatizzato con foglie di menta fresca, fritto oppure alla griglia"
+            "description": "Mixed milk cheese flavored with fresh mint leaves, fried or grilled"
         },
         {
             "id": "manuri",
             "name": "Manuri",
             "price": 6.0,
-            "description": "Formaggio fresco di pecora cotto alla griglia con olio EVO e origano, oppure con miele e sesamo nero"
+            "description": "Fresh sheep's milk cheese grilled with extra virgin olive oil and oregano, or with honey and black sesame"
         }
     ]
 }

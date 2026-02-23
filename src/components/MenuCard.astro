@@ -6,47 +6,57 @@ interface Props {
   isStar: boolean;
 }
 
-const { name, description, price, isStar } = Astro.props;
-
-const { currentLocale } = Astro;
-const recommendedLabel = currentLocale === 'en' ? 'Recommended' : 'Consigliato';
+const { name, description, price } = Astro.props;
 ---
 
-<div class={`group relative p-4 md:p-6 bg-transparent border-b border-primary/10 transition-all duration-300 hover:bg-white/40 active:scale-[0.99] ${isStar ? 'bg-accent/5' : ''}`}>
-  {isStar && (
-    <div class="absolute -top-3 left-4 bg-accent text-white text-[10px] md:text-[11px] font-marcellus px-3 md:px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm" aria-label={recommendedLabel}>
-      {recommendedLabel}
-    </div>
-  )}
-  
+<div
+  class="group relative p-4 md:p-6 bg-transparent border-b border-primary/10 transition-all duration-300 hover:bg-white/40 active:scale-[0.99]"
+>
   <!-- Name + Price row -->
   <div class="flex justify-between items-baseline gap-3 md:gap-4">
-    <h3 class={`font-marcellus text-slate group-hover:text-primary transition-colors duration-300 leading-tight ${isStar ? 'text-xl md:text-2xl' : 'text-lg md:text-xl'}`}>
+    <h3
+      class="font-marcellus text-slate group-hover:text-primary transition-colors duration-300 leading-tight text-lg md:text-xl"
+    >
       {name}
     </h3>
-    <span class="text-lg md:text-xl font-marcellus text-primary whitespace-nowrap shrink-0">
+    <span
+      class="text-lg md:text-xl font-marcellus text-primary whitespace-nowrap shrink-0"
+    >
       € {price.toFixed(2)}
     </span>
   </div>
-  
+
   <!-- Description -->
-  {description && (
-    <p class="text-slate/80 text-sm md:text-base leading-relaxed font-sans mt-2 md:mt-4 pr-2 md:pr-4">
-      {description}
-    </p>
-  )}
+  {
+    description && (
+      <p class="text-slate/80 text-sm md:text-base leading-relaxed font-sans mt-2 md:mt-4 pr-2 md:pr-4">
+        {description}
+      </p>
+    )
+  }
 
   <!-- Organic divider on hover -->
-  <div class="mt-4 md:mt-6 flex justify-end opacity-0 group-hover:opacity-60 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0">
-    <svg class="w-16 h-3 text-primary/40" viewBox="0 0 100 20" preserveAspectRatio="none">
-        <path d="M0 10 Q 15 2 30 10 T 60 10 T 100 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  <div
+    class="mt-4 md:mt-6 flex justify-end opacity-0 group-hover:opacity-60 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0"
+  >
+    <svg
+      class="w-16 h-3 text-primary/40"
+      viewBox="0 0 100 20"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M0 10 Q 15 2 30 10 T 60 10 T 100 10"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"></path>
     </svg>
   </div>
 </div>
 
 <style>
-    .group {
-        /* Subtlest irregular edge to avoid perfect digital corners */
-        clip-path: polygon(0.2% 0.5%, 99.8% 0%, 100% 99.5%, 0.5% 100%);
-    }
+  .group {
+    /* Subtlest irregular edge to avoid perfect digital corners */
+    clip-path: polygon(0.2% 0.5%, 99.8% 0%, 100% 99.5%, 0.5% 100%);
+  }
 </style>

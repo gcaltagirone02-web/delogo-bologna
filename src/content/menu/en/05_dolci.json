@@ -1,54 +1,55 @@
 {
     "title": "DOLCI",
+    "titleEn": "DESSERTS",
     "order": 5,
     "items": [
         {
             "id": "yogurt",
             "name": "Yogurt Greco",
             "price": 5.0,
-            "description": "Con miele e mandorle o con amarene caramellate"
+            "description": "With honey and almonds or with caramelized black cherries"
         },
         {
             "id": "kantaifi",
             "name": "Kantaifi",
             "price": 5.0,
-            "description": "Sfogliata di capelli d’angelo con mandorle, noci e miele"
+            "description": "Angel hair pastry with almonds, walnuts and honey"
         },
         {
             "id": "baklavas",
             "name": "Baklavas",
             "price": 5.0,
-            "description": "Strati di pasta fillo con frutta secca e miele"
+            "description": "Layers of phyllo dough with dried fruit and honey"
         },
         {
             "id": "galaktobureko",
             "name": "Galaktobureko",
             "price": 5.0,
-            "description": "Sfogliata di pasta fillo ripiena con crema"
+            "description": "Phyllo pastry filled with custard"
         },
         {
             "id": "chalvas",
             "name": "Chalvas",
             "price": 5.0,
-            "description": "Torroncino greco di sesamo al pistacchio"
+            "description": "Greek sesame nougat with pistachio"
         },
         {
             "id": "ekmek",
             "name": "Ekmek",
             "price": 5.0,
-            "description": "Tortino con crema al cocco e masticha"
+            "description": "Coconut and mastic cream cake"
         },
         {
             "id": "portokalopita",
             "name": "Portokalopita",
             "price": 5.0,
-            "description": "Torta all’arancio con bagna di sciroppo"
+            "description": "Orange cake with syrup"
         },
         {
             "id": "sarikopites",
             "name": "Sarikopites Me Meli",
             "price": 5.0,
-            "description": "Sfogliatina ripiena di ricotta con miele e cannella"
+            "description": "Ricotta-filled pastry with honey and cinnamon"
         }
     ]
 }

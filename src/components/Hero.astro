@@ -1,62 +1,100 @@
 ---
-import { Image } from 'astro:assets';
-import heroImage from '../asset/images/delogo-hero-cucina-greca-bologna.jpeg';
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Image } from "astro:assets";
+import heroImageDesktop from "../asset/images/Delogo-Hero-fullscreen.jpeg";
+import heroImageMobile from "../asset/images/Delogo-Hero-Mobile-full.jpeg";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const { currentLocale } = Astro;
-const locale = currentLocale || 'it';
-const isIt = locale === 'it';
+const locale = currentLocale || "it";
+const isIt = locale === "it";
 
-const content = isIt ? {
-	title: "Dal Mar Egeo a Creta",
-	titleAccent: "",
-	subtitle: "Un viaggio autentico attraverso i profumi, la leggerezza e la convivialità del Mediterraneo, servito con calore nel cuore di Bologna.",
-	ctaPrimary: "Prenota un Tavolo",
-	ctaSecondary: "Guarda il Menù",
-	menuHref: getRelativeLocaleUrl('it', '/menu')
-} : {
-	title: "From the Aegean to Crete",
-	titleAccent: "",
-	subtitle: "An authentic journey through the aromas, lightness, and conviviality of the Mediterranean, served with warmth in the heart of Bologna.",
-	ctaPrimary: "Book a Table",
-	ctaSecondary: "View the Menu",
-	menuHref: getRelativeLocaleUrl('en', '/menu')
-};
+const content = isIt
+  ? {
+      title: "Dal Mar Egeo a Creta",
+      titleAccent: "",
+      subtitle: "Il sapore di Creta nel cuore di Bologna.",
+      ctaPrimary: "Prenota un Tavolo",
+      ctaSecondary: "Guarda il Menù",
+      menuHref: getRelativeLocaleUrl("it", "/menu"),
+    }
+  : {
+      title: "From the Aegean to Crete",
+      titleAccent: "",
+      subtitle: "The taste of Crete in the heart of Bologna.",
+      ctaPrimary: "Book a Table",
+      ctaSecondary: "View the Menu",
+      menuHref: getRelativeLocaleUrl("en", "/menu"),
+    };
 ---
 
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-	<!-- Background Image -->
-	<div class="absolute inset-0 z-0">
-		<Image 
-			src={heroImage} 
-			alt="Delogo - Taverna Greca Moderna" 
-			width={1920}
-			height={1080}
-			loading="eager"
-            fetchpriority="high"
-			class="w-full h-full object-cover object-center"
-		/>
-        <!-- Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40 z-0"></div>
-	</div>
-	
-	<!-- Content -->
-	<div class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center pt-28 md:pt-0 animate-fade-in-up opacity-0" style="animation-delay: 200ms;">
-        <h1 class="text-4xl md:text-7xl lg:text-8xl mb-6 !text-white z-10 relative drop-shadow-lg font-serif font-bold leading-tight" style="color: #FFFFFF !important;">
-            {content.title}
-        </h1>
-        
-        <h2 class="text-lg md:text-xl md:text-2xl !text-gray-100 mb-10 font-sans font-medium max-w-2xl leading-relaxed" style="color: #f3f4f6 !important;">
-            {content.subtitle}
-        </h2>
-        
-        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
-            <a href="#prenota" class="bg-[#D14638] text-white px-8 md:px-10 py-4 rounded-full text-lg md:text-xl font-bold shadow-xl hover:scale-105 transition-transform duration-300 text-center">
-                {content.ctaPrimary}
-            </a>
-            <a href={content.menuHref} class="bg-white/10 border border-white/80 text-white backdrop-blur-sm px-8 md:px-10 py-4 rounded-full text-lg md:text-xl font-bold hover:bg-white hover:text-[#005A9C] transition-all duration-300 text-center">
-                {content.ctaSecondary}
-            </a>
-        </div>
-	</div>
+<section
+  class="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
+>
+  <!-- Background Image -->
+  <div class="absolute inset-0 z-0">
+    <!-- Desktop Image -->
+    <Image
+      src={heroImageDesktop}
+      alt="Delogo - Taverna Greca Moderna Desktop"
+      width={1920}
+      height={1080}
+      format="webp"
+      quality={80}
+      loading="eager"
+      fetchpriority="high"
+      class="w-full h-full object-cover object-center hidden md:block"
+    />
+    <!-- Mobile Image -->
+    <Image
+      src={heroImageMobile}
+      alt="Delogo - Taverna Greca Moderna Mobile"
+      widths={[459, 918]}
+      sizes="(max-width: 768px) 100vw"
+      format="webp"
+      quality={80}
+      loading="eager"
+      fetchpriority="high"
+      class="w-full h-full object-cover object-center block md:hidden"
+    />
+  </div>
+
+  <!-- Dark Overlay for Full-Bleed Readability -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60 z-0"
+  >
+  </div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 text-center px-4 sm:px-8 max-w-5xl mx-auto flex flex-col items-center animate-fade-in-up opacity-0"
+    style="animation-delay: 200ms;"
+  >
+    <h1
+      class="text-5xl md:text-7xl lg:text-8xl mb-4 z-10 relative font-marcellus leading-tight text-white drop-shadow-md"
+      set:html={isIt
+        ? "Dal Mar Egeo <br class='md:hidden' /> a Creta"
+        : "From the Aegean <br class='md:hidden' /> to Crete"}
+    />
+
+    <h2
+      class="text-xl md:text-2xl lg:text-3xl mb-12 font-serif font-medium max-w-2xl leading-relaxed text-white/90 drop-shadow-md"
+    >
+      {content.subtitle}
+    </h2>
+
+    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+      <a
+        href={getRelativeLocaleUrl(locale, "/") + "#prenota"}
+        class="bg-[#D14638] text-white px-8 md:px-10 py-4 rounded-full text-lg md:text-xl font-bold shadow-xl hover:scale-105 transition-transform duration-300 text-center"
+      >
+        {content.ctaPrimary}
+      </a>
+      <a
+        href={content.menuHref}
+        class="border-2 border-white text-white backdrop-blur-sm px-8 md:px-10 py-4 rounded-full text-lg md:text-xl font-bold hover:bg-white hover:text-primary transition-all duration-300 text-center shadow-lg"
+      >
+        {content.ctaSecondary}
+      </a>
+    </div>
+  </div>
 </section>

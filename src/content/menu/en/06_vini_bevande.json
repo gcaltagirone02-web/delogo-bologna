@@ -1,12 +1,13 @@
 {
     "title": "VINI & BEVANDE",
+    "titleEn": "WINES & DRINKS",
     "order": 6,
     "items": [
         {
             "id": "vino-caraffa",
-            "name": "Vino in caraffa (1 Lt)",
+            "name": "House Wine in Carafe (1 Lt)",
             "price": 11.0,
-            "description": "Bianco, Rosso, Rosé, Retsina"
+            "description": "White, Red, Rosé, Retsina"
         },
         {
             "id": "kechribari",
@@ -40,14 +41,14 @@
         },
         {
             "id": "birra-spina",
-            "name": "Birra Alla Spina (Caraffa 1 Lt)",
+            "name": "Draft Beer (Carafe 1 Lt)",
             "price": 11.0
         },
         {
             "id": "bibite",
-            "name": "Bibite Greche",
+            "name": "Greek Soft Drinks",
             "price": 3.0,
-            "description": "Cola, Aranciata, Limonata"
+            "description": "Cola, Orangeade, Lemonade"
         },
         {
             "id": "uzo-tsikudia",

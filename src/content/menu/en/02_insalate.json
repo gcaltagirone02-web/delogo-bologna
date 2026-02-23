@@ -1,18 +1,19 @@
 {
     "title": "INSALATE",
+    "titleEn": "SALADS",
     "order": 2,
     "items": [
         {
             "id": "choriatiki",
             "name": "Choriatiki",
             "price": 9.0,
-            "description": "Pomodori, cetrioli, cipolle, peperoni, feta, origano e olive"
+            "description": "Tomatoes, cucumbers, onions, peppers, feta, oregano and olives"
         },
         {
             "id": "kritiki",
             "name": "Kritiki",
             "price": 8.0,
-            "description": "Frisella, pomodori, peperoni, capperi, olive, formaggio ovino e origano"
+            "description": "Frisella, tomatoes, peppers, capers, olives, sheep cheese and oregano"
         }
     ]
 }

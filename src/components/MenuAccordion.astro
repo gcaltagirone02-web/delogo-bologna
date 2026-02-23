@@ -1,80 +1,187 @@
 ---
-const menu = [
-	{
-		category: "ANTIPASTI",
-		items: [
-			{ name: "Tzatziki", price: "€ 5,00", desc: "Salsa allo yogurt, cetriolo e aglio" },
-			{ name: "Dolmadakia", price: "€ 7,00", desc: "Involtini di foglie di vite con riso e spezie" },
-			{ name: "Feta al Forno", price: "€ 6,00", desc: "Feta greca DOP cotta al forno con pomodoro e peperoni" }
-		]
-	},
-	{
-		category: "SECONDI",
-		items: [
-			{ name: "Gemista", price: "€ 11,00", desc: "Pomodori e peperoni ripieni di riso e aromi" },
-			{ name: "Chtapodi Psito", price: "€ 17,00", desc: "Polpo alla griglia servito con fava" }
-		]
-	},
-	{
-		category: "VINI",
-		items: [
-			{ name: "Retsina Kechribari", price: "€ 9,50", desc: "Vino bianco resinato tradizionale" }
-		]
-	}
-];
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const { currentLocale } = Astro;
+const locale = currentLocale || "it";
+const isIt = locale === "it";
+
+const menu = isIt
+  ? [
+      {
+        category: "ANTIPASTI",
+        items: [
+          {
+            name: "Tzatziki",
+            price: "€ 5,00",
+            desc: "Salsa allo yogurt, cetriolo e aglio",
+          },
+          {
+            name: "Dolmadakia",
+            price: "€ 7,00",
+            desc: "Involtini di foglie di vite con riso e spezie",
+          },
+          {
+            name: "Feta al Forno",
+            price: "€ 6,00",
+            desc: "Feta greca DOP cotta al forno con pomodoro e peperoni",
+          },
+        ],
+      },
+      {
+        category: "SECONDI",
+        items: [
+          {
+            name: "Gemista",
+            price: "€ 11,00",
+            desc: "Pomodori e peperoni ripieni di riso e aromi",
+          },
+          {
+            name: "Chtapodi Psito",
+            price: "€ 17,00",
+            desc: "Polpo alla griglia servito con fava",
+          },
+        ],
+      },
+      {
+        category: "VINI",
+        items: [
+          {
+            name: "Retsina Kechribari",
+            price: "€ 9,50",
+            desc: "Vino bianco resinato tradizionale",
+          },
+        ],
+      },
+    ]
+  : [
+      {
+        category: "STARTERS",
+        items: [
+          {
+            name: "Tzatziki",
+            price: "€ 5,00",
+            desc: "Yogurt, cucumber and garlic sauce",
+          },
+          {
+            name: "Dolmadakia",
+            price: "€ 7,00",
+            desc: "Vine leaf rolls with rice and spices",
+          },
+          {
+            name: "Baked Feta",
+            price: "€ 6,00",
+            desc: "Baked PDO Greek Feta with tomato and peppers",
+          },
+        ],
+      },
+      {
+        category: "MAINS",
+        items: [
+          {
+            name: "Gemista",
+            price: "€ 11,00",
+            desc: "Tomatoes and peppers stuffed with rice and herbs",
+          },
+          {
+            name: "Chtapodi Psito",
+            price: "€ 17,00",
+            desc: "Grilled octopus served with fava",
+          },
+        ],
+      },
+      {
+        category: "WINES",
+        items: [
+          {
+            name: "Retsina Kechribari",
+            price: "€ 9,50",
+            desc: "Traditional resinated white wine",
+          },
+        ],
+      },
+    ];
 ---
 
-<section class="py-24 bg-background">
-	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-16">
-			<h2 class="text-5xl font-serif font-bold text-primary mb-4">Il Nostro Menù</h2>
-			<div class="w-16 h-1 bg-accent mx-auto mb-6"></div>
-			<p class="text-xl text-gray-600 italic font-serif">Dalle isole alla tua tavola, preparato fresco ogni giorno</p>
-		</div>
+<section class="py-24 bg-paper reveal-on-scroll">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2
+        class="text-4xl md:text-6xl text-center mb-16 font-marcellus text-primary uppercase tracking-wider"
+      >
+        {isIt ? "Il Nostro Menù" : "Our Menu"}
+      </h2>
+      <p class="text-xl text-slate/80 italic font-marcellus -mt-10 mb-16">
+        {
+          isIt
+            ? "Dalle isole alla tua tavola, preparato fresco ogni giorno"
+            : "From the islands to your table, prepared fresh every day"
+        }
+      </p>
+    </div>
 
-		<div class="space-y-4">
-			{menu.map((section, index) => (
-				<details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden" open={index === 0}>
-					<summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
-						<h3 class="text-2xl font-bold text-gray-900 tracking-tight transition-colors group-hover:text-primary">
-							{section.category}
-						</h3>
-						<span class="text-primary transition-transform duration-300 group-open:rotate-180">
-                            <!-- Simple Chevron for subtle interaction -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-						</span>
-					</summary>
-					<div class="p-6 md:p-8 pt-0 space-y-8 bg-white">
-						{section.items.map(item => (
-							<div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2 sm:gap-6 border-b border-gray-50 pb-6 last:border-0 last:pb-0">
-								<div class="flex-1">
-									<h4 class="text-xl font-bold text-gray-900 mb-2">{item.name}</h4>
-									<p class="text-gray-700 leading-relaxed font-sans">
-										{item.desc}
-									</p>
-								</div>
-								<div class="flex items-baseline gap-4 mt-2 sm:mt-0">
-                                    <span class="font-medium text-gray-900 text-xl whitespace-nowrap">{item.price}</span>
-                                </div>
-							</div>
-						))}
-					</div>
-				</details>
-			))}
-		</div>
-        
-        <div class="mt-20 text-center">
-            <a href="/menu" class="inline-block px-12 py-5 bg-primary text-white rounded-full font-bold hover:bg-primary/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1">
-                Sfoglia il Menù Completo
-            </a>
-        </div>
-	</div>
+    <div class="space-y-6">
+      {
+        menu.map((section, index) => (
+          <details
+            class="group bg-white/40 rounded-2xl shadow-sm border border-primary/5 overflow-hidden transition-all duration-300 hover:bg-white/60"
+            open={index === 0}
+          >
+            <summary class="flex justify-between items-center p-6 md:p-10 cursor-pointer list-none focus:outline-none">
+              <h3 class="text-2xl md:text-3xl font-marcellus font-bold text-gray-900 tracking-wide transition-colors group-hover:text-primary">
+                {section.category}
+              </h3>
+              <span class="text-primary transition-transform duration-500 group-open:rotate-180">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </span>
+            </summary>
+            <div class="p-6 md:px-10 md:pb-10 pt-0 space-y-10">
+              {section.items.map((item) => (
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2 sm:gap-6 border-b border-primary/5 pb-8 last:border-0 last:pb-0 group/item">
+                  <div class="flex-1">
+                    <h4 class="text-xl md:text-2xl font-marcellus font-bold text-gray-900 mb-3 group-hover/item:text-primary transition-colors duration-300">
+                      {item.name}
+                    </h4>
+                    <p class="text-slate/70 leading-relaxed font-sans italic">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div class="flex items-baseline gap-4 mt-2 sm:mt-0">
+                    <span class="font-marcellus text-gray-900 text-2xl whitespace-nowrap">
+                      {item.price}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+
+    <div class="mt-24 text-center">
+      <a
+        href={getRelativeLocaleUrl(locale, "/menu")}
+        class="inline-block px-12 py-5 bg-[#D14638] text-white rounded-full font-bold shadow-xl hover:bg-[#a33429] hover:scale-105 hover:shadow-2xl transition-all duration-300 uppercase tracking-widest text-sm"
+      >
+        {isIt ? "Sfoglia il Menù Completo" : "Browse Full Menu"}
+      </a>
+    </div>
+  </div>
 </section>
 
 <style>
-	details summary::-webkit-details-marker {
-		display: none;
-	}
+  details summary::-webkit-details-marker {
+    display: none;
+  }
 </style>

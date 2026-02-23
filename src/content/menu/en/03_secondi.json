@@ -1,80 +1,81 @@
 {
     "title": "SECONDI",
+    "titleEn": "MAINS",
     "order": 3,
     "items": [
         {
             "id": "gemista",
             "name": "Gemista",
             "price": 11.0,
-            "description": "Verdure al forno ripiene con riso, uvetta e pinoli"
+            "description": "Baked vegetables stuffed with rice, raisins and pine nuts"
         },
         {
             "id": "imam",
             "name": "Imam",
             "price": 11.0,
-            "description": "Melanzane al forno con pomodori, verdure e feta"
+            "description": "Baked eggplant with tomatoes, vegetables and feta"
         },
         {
             "id": "moussakas",
             "name": "Moussakas",
             "price": 12.0,
-            "description": "Sformato con melanzane, patate, zucchine, ragù e besciamella",
+            "description": "Oven-baked dish with eggplant, potatoes, zucchini, meat sauce and béchamel",
             "isStar": true
         },
         {
             "id": "sutzukakia",
             "name": "Sutzukakia",
             "price": 12.0,
-            "description": "Polpette di manzo e agnello in umido servite con riso"
+            "description": "Stewed beef and lamb meatballs served with rice"
         },
         {
             "id": "tas-kebap",
             "name": "Tas Kebap",
             "price": 14.0,
-            "description": "Stracotto di manzo speziato servito con riso"
+            "description": "Spiced beef stew served with rice"
         },
         {
             "id": "suvlaki",
             "name": "Suvlaki",
             "price": 12.0,
-            "description": "Spiedini di maiale serviti con insalata e tzatziki",
+            "description": "Pork skewers served with salad and tzatziki",
             "isStar": true
         },
         {
             "id": "kotosouvlaki",
             "name": "Kotosouvlaki",
             "price": 13.0,
-            "description": "Spiedini di pollo serviti con insalata e senape greca"
+            "description": "Chicken skewers served with salad and Greek mustard"
         },
         {
             "id": "arnosuvlaki",
             "name": "Arnosuvlaki",
             "price": 18.0,
-            "description": "Spiedo di agnello 300 gr. con patate e senape greca"
+            "description": "Lamb skewer (300 gr.) with potatoes and Greek mustard"
         },
         {
             "id": "bifteki",
             "name": "Bifteki",
             "price": 12.0,
-            "description": "Polpette schiacciate di manzo alla griglia servite con patate e tzatziki"
+            "description": "Grilled flattened beef meatballs served with potatoes and tzatziki"
         },
         {
             "id": "lukanika",
             "name": "Lukanika",
             "price": 14.0,
-            "description": "Salsicce d’agnello e suino alla griglia servite con patate e tirokafteri"
+            "description": "Grilled lamb and pork sausages served with potatoes and tirokafteri"
         },
         {
             "id": "chtapodi",
             "name": "Chtapodi Psito",
             "price": 17.0,
-            "description": "Polpo alla griglia con purea di fave secche"
+            "description": "Grilled octopus with fava bean purée"
         },
         {
             "id": "bakaliaros",
             "name": "Bakaliaros",
             "price": 15.0,
-            "description": "Baccalà al forno con patate, pomodorini, cipolle e olive"
+            "description": "Baked salted codfish with potatoes, cherry tomatoes, onions and olives"
         }
     ]
 }

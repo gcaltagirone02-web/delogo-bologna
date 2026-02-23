@@ -1,20 +1,21 @@
 {
     "title": "CONTORNI",
+    "titleEn": "SIDES",
     "order": 4,
     "items": [
         {
             "id": "patate-fritte",
-            "name": "Patate fritte rustiche aromatizzate",
+            "name": "Seasoned Rustic Fries",
             "price": 4.0
         },
         {
             "id": "riso-vapore",
-            "name": "Riso al vapore",
+            "name": "Steamed Rice",
             "price": 4.0
         },
         {
             "id": "pita",
-            "name": "Pita vuota",
+            "name": "Pita Bread",
             "price": 1.0
         }
     ]

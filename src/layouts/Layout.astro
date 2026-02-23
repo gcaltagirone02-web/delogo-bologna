@@ -1,12 +1,15 @@
 ---
-import SEOHead from '../components/SEOHead.astro';
-import BackToTop from '../components/BackToTop.astro';
-import '../styles/global.css';
-import '@fontsource/marcellus';
+import SEOHead from "../components/SEOHead.astro";
+import BackToTop from "../components/BackToTop.astro";
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+import "@fontsource/marcellus";
+import "@fontsource/mrs-saint-delafield";
+import "@fontsource/eb-garamond/400.css";
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -15,46 +18,70 @@ const { currentLocale } = Astro;
 
 <!doctype html>
 <html lang={currentLocale}>
-	<head>
-		<SEOHead title={title} description={description} />
-	</head>
-	<body class="bg-paper text-slate font-marcellus min-h-screen flex flex-col">
-		<slot />
-        <BackToTop />
-		<style is:global>
-			:root {
-				--blue-egeo: #4B9CD3;
-				--rosso-corallo: #D14638;
-				--grigio-ardesia: #2F4F4F;
-				--warm-paper: #FFFFFF;
-			}
+  <head>
+    <SEOHead title={title} description={description} />
+    <ClientRouter />
+    <slot name="head" />
+  </head>
+  <body class="bg-paper text-slate font-marcellus min-h-screen flex flex-col">
+    <!-- Skip Link for Accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg"
+    >
+      {
+        currentLocale === "en"
+          ? "Skip to content"
+          : "Vai al contenuto principale"
+      }
+    </a>
+    <slot />
+    <BackToTop />
+    <style is:global>
+      :root {
+        --blue-egeo: #4b9cd3;
+        --rosso-corallo: #d14638;
+        --grigio-ardesia: #2f4f4f;
+        --warm-paper: #ffffff;
+      }
 
-			body {
-				font-family: 'Tenor Sans', sans-serif;
-				background-color: var(--warm-paper);
-			}
-			
-			h1, h2, h3, h4, h5, h6, .font-serif {
-				font-family: 'Marcellus', serif;
-			}
-			
-			.cta-button {
-				background-color: var(--rosso-corallo);
-				color: white;
-				transition: transform 0.2s ease-in-out;
-			}
-			
-			.cta-button:hover {
-				transform: scale(1.05);
-			}
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 120px; /* Offset for fixed header */
+      }
 
-			footer a:focus-visible, 
-			header a:focus-visible, 
-			button:focus-visible {
-				outline: 3px solid var(--blue-egeo);
-				outline-offset: 4px;
-				border-radius: 4px;
-			}
-		</style>
-	</body>
+      body {
+        font-family: "Tenor Sans", sans-serif;
+        background-color: var(--warm-paper);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .font-serif {
+        font-family: "Marcellus", serif;
+      }
+
+      .cta-button {
+        background-color: var(--rosso-corallo);
+        color: white;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .cta-button:hover {
+        transform: scale(1.05);
+      }
+
+      footer a:focus-visible,
+      header a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--blue-egeo);
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+    </style>
+  </body>
 </html>

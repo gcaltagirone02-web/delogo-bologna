@@ -25,13 +25,6 @@ const optimizedDesktop = await getImage({
   width: 1920,
   height: 1080,
 });
-const optimizedMobile = await getImage({
-  src: imgHeroMobile,
-  format: "webp",
-  quality: 80,
-  width: 1080,
-  height: 1920,
-});
 ---
 
 <Layout title={title} description={description}>
@@ -41,13 +34,6 @@ const optimizedMobile = await getImage({
       as="image"
       href={optimizedDesktop.src}
       media="(min-width: 768px)"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href={optimizedMobile.src}
-      media="(max-width: 767px)"
       fetchpriority="high"
     />
   </Fragment>
@@ -77,8 +63,9 @@ const optimizedMobile = await getImage({
                 alt="I paesaggi e i sapori dell'Egeo"
                 width={378}
                 height={378}
-                quality={65}
+                quality={50}
                 format="webp"
+                loading="lazy"
                 class="w-full h-full object-cover scale-[1.03] transition-transform duration-1000 group-hover:scale-110"
               />
             </div>

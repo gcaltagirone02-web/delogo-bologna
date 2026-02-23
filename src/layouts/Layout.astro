@@ -7,6 +7,10 @@ import "@fontsource/marcellus";
 import "@fontsource/mrs-saint-delafield";
 import "@fontsource/eb-garamond/400.css";
 import "@fontsource/tenor-sans/400.css";
+import ebGaramondUrl from "@fontsource/eb-garamond/files/eb-garamond-latin-400-normal.woff2?url";
+import mrsSaintUrl from "@fontsource/mrs-saint-delafield/files/mrs-saint-delafield-latin-400-normal.woff2?url";
+import marcellusUrl from "@fontsource/marcellus/files/marcellus-latin-400-normal.woff2?url";
+import tenorSansUrl from "@fontsource/tenor-sans/files/tenor-sans-latin-400-normal.woff2?url";
 
 interface Props {
   title: string;
@@ -22,6 +26,34 @@ const { currentLocale } = Astro;
   <head>
     <SEOHead title={title} description={description} />
     <ClientRouter />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={ebGaramondUrl}
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={mrsSaintUrl}
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={marcellusUrl}
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={tenorSansUrl}
+      crossorigin="anonymous"
+    />
     <slot name="head" />
   </head>
   <body class="bg-paper text-slate font-marcellus min-h-screen flex flex-col">

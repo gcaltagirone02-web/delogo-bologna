@@ -5,9 +5,17 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import MenuList from "../../components/MenuList.astro";
 
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import imgMenuHeroDesktop from "../../asset/images/menu-hero-desktop.jpeg";
 import imgMenuHeroMobile from "../../asset/images/menu-hero-mobile.jpeg";
+
+const optimizedMenuDesktop = await getImage({
+  src: imgMenuHeroDesktop,
+  format: "webp",
+  quality: 80,
+  width: 1920,
+  height: 1080,
+});
 
 const menuEntries = await getCollection("menu", ({ id }) => {
   return id.replace(/\\/g, "/").startsWith("en/");
@@ -31,6 +39,15 @@ const introText = isIt
 ---
 
 <Layout title={title} description={description}>
+  <Fragment slot="head">
+    <link
+      rel="preload"
+      as="image"
+      href={optimizedMenuDesktop.src}
+      media="(min-width: 768px)"
+      fetchpriority="high"
+    />
+  </Fragment>
   <Header theme="transparent" />
 
   <main class="pb-16 md:pb-20 bg-paper" id="main-content">
@@ -41,15 +58,25 @@ const introText = isIt
       <Image
         src={imgMenuHeroDesktop}
         alt="Atmosfera conviviale Delogo Desktop"
+        width={1920}
+        height={1080}
+        format="webp"
+        quality={80}
         class="absolute inset-0 w-full h-full object-cover hidden md:block"
         loading="eager"
+        fetchpriority="high"
       />
       <!-- Mobile Image -->
       <Image
         src={imgMenuHeroMobile}
         alt="Atmosfera conviviale Delogo Mobile"
+        widths={[480, 800, 1080]}
+        sizes="100vw"
+        format="webp"
+        quality={75}
         class="absolute inset-0 w-full h-full object-cover block md:hidden"
         loading="eager"
+        fetchpriority="high"
       />
       <!-- Dark Overlay for Readability -->
       <div

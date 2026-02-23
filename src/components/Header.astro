@@ -110,11 +110,12 @@ const menuCategories = isIt
       >
         <Image
           src={logo}
+          widths={[48, 80, 96, 160]}
+          sizes="(min-width: 768px) 80px, 48px"
+          quality={60}
           alt="Delogo - Ristorante Greco Bologna"
           id="header-logo"
           class={logoClass}
-          width={96}
-          height={178}
           loading="eager"
           fetchpriority="high"
         />

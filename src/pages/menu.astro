@@ -16,13 +16,6 @@ const optimizedMenuDesktop = await getImage({
   width: 1920,
   height: 1080,
 });
-const optimizedMenuMobile = await getImage({
-  src: imgMenuHeroMobile,
-  format: "webp",
-  quality: 80,
-  width: 1080,
-  height: 1920,
-});
 
 const menuEntries = await getCollection("menu", ({ id }) => {
   return id.replace(/\\/g, "/").startsWith("it/");
@@ -54,13 +47,6 @@ const introText = isIt
       media="(min-width: 768px)"
       fetchpriority="high"
     />
-    <link
-      rel="preload"
-      as="image"
-      href={optimizedMenuMobile.src}
-      media="(max-width: 767px)"
-      fetchpriority="high"
-    />
   </Fragment>
   <Header theme="transparent" />
 
@@ -84,10 +70,10 @@ const introText = isIt
       <Image
         src={imgMenuHeroMobile}
         alt="Atmosfera conviviale Delogo Mobile"
-        width={1080}
-        height={1920}
+        widths={[480, 800, 1080]}
+        sizes="100vw"
         format="webp"
-        quality={80}
+        quality={75}
         class="absolute inset-0 w-full h-full object-cover block md:hidden"
         loading="eager"
         fetchpriority="high"

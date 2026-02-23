@@ -1,2 +1,0 @@
-description = "Diagnose planning directory health and optionally repair issues"
-prompt = "<objective>\r\nValidate `.planning/` directory integrity and report actionable issues. Checks for missing files, invalid configurations, inconsistent state, and orphaned plans.\r\n</objective>\r\n\r\n<execution_context>\r\n@./.gemini/get-shit-done/workflows/health.md\r\n</execution_context>\r\n\r\n<process>\r\nExecute the health workflow from @./.gemini/get-shit-done/workflows/health.md end-to-end.\r\nParse --repair flag from arguments and pass to workflow.\r\n</process>"

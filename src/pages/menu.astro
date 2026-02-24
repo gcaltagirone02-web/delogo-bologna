@@ -390,10 +390,10 @@ const introText = isIt
       });
     }
 
-    // ── Position-based scroll-spy ──
-    // Finds which section's top is closest to — but still above — a detection
-    // line at 35% from the top of the viewport. Works reliably regardless of
-    // section height (fixes IntersectionObserver miss on short sections like SECONDI).
+    // ── Robust BoundingClientRect Scroll-Spy with Navigation Mutex ──
+    let isNavigating = false;
+    let resetNavigatingTimeout: ReturnType<typeof setTimeout>;
+
     function findActiveSection(): string {
       const headerH =
         parseFloat(
@@ -401,23 +401,61 @@ const introText = isIt
             "--header-h",
           ),
         ) || 100;
-      // Detection line: header bottom + half the remaining space
-      const triggerY =
-        window.scrollY + headerH + (window.innerHeight - headerH) * 0.25;
+
+      // La "linea di innesco" è posizionata poco sotto l'header (es. +80px)
+      // in modo che quando la sezione tocca l'invisibile margine di scroll-margin-top
+      // (calcolato a headerH + 60px), il suo top sia appena sopra o vicino a questa linea.
+      const triggerOffset = headerH + 80;
 
       let activeId = sections[0].id;
+      let minDistance = Infinity;
+
       for (const section of sections) {
-        if (section.offsetTop <= triggerY) {
+        const rect = section.getBoundingClientRect();
+
+        // Se il top della sezione è sopra la viewport o appena sotto l'header
+        if (rect.top <= triggerOffset) {
           activeId = section.id;
+        } else {
+          // Seleziona la sezione visibile più vicina all'header E che sta coprendo lo schermo
+          const distanceToTrigger = rect.top - triggerOffset;
+          if (
+            distanceToTrigger >= 0 &&
+            distanceToTrigger < minDistance &&
+            rect.bottom > triggerOffset
+          ) {
+            // Questo catch salva le sezioni in schermi molto grandi o durante animazioni veloci
+            activeId = section.id;
+            minDistance = distanceToTrigger;
+          }
         }
       }
+
+      // Check "End of Page" assoluto per l'ultima sezione (Vini & Bevande su Mobile)
+      // Se il fondo del documento tocca il fondo della viewport (con tolleranza minima)
+      const maxScrollHeight = Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight,
+        document.body.clientHeight,
+        document.documentElement.clientHeight,
+      );
+      if (
+        Math.ceil(window.scrollY + window.innerHeight) >=
+        maxScrollHeight - 10
+      ) {
+        activeId = sections[sections.length - 1].id;
+      }
+
       return activeId;
     }
 
     // Update on scroll (throttled with requestAnimationFrame)
     let rafPending = false;
     function onScroll() {
-      if (rafPending) return;
+      if (rafPending || isNavigating) return; // Ignora lo scroll durante il click (animazione scroll-behavior: smooth)
+
       rafPending = true;
       requestAnimationFrame(() => {
         setActive(findActiveSection());
@@ -427,11 +465,23 @@ const introText = isIt
 
     window.addEventListener("scroll", onScroll, { passive: true });
 
-    // Immediate feedback on pill click (don't wait for scroll)
+    // Immediate feedback on pill click (don't wait for scroll, and mute scroll events)
     pills.forEach((pill) => {
-      pill.addEventListener("click", () => {
+      pill.addEventListener("click", (e) => {
         const id = pill.dataset.category;
-        if (id) setActive(id);
+        if (id) {
+          // Mute lo scroll-spy per coprire il tempo di `scroll-behavior: smooth` (es. 800ms)
+          isNavigating = true;
+          clearTimeout(resetNavigatingTimeout);
+
+          setActive(id);
+
+          resetNavigatingTimeout = setTimeout(() => {
+            isNavigating = false;
+            // Un controllo finale al termine dello smooth scroll
+            setActive(findActiveSection());
+          }, 800);
+        }
       });
     });
 
